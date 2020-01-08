@@ -1,8 +1,8 @@
 
 # Astrologizer
 
-* https://github.com/bwmccray/Astrologizer.git
-* https://bwmccray.github.io/Astrologizer/
+* https://github.com/magsmagsmags/CosmicAstrologizer.git
+* https://magsmagsmags.github.io/CosmicAstrologizer/
 
 # Project Decription
  Build web application from scratch that allows the user to select from a list of astrological zodiac signs and then display information to the user that is specific to that sign.  To acheive this, we will utilize API calls to get Mercury retrograde information, display Spotify playlists, and disdplay a photo of the day from NASA.  
