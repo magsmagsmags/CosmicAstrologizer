@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astrologizer</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <img src="index.ico" alt="Logo"> -->
+    <script src="assets/js/moment.js"></script>
+
+    <script src="assets/js/javaScript.js"></script>
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+</head>
+
+<body>
+
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <h1 class="title">
+                Astrologizer
+            </h1>
+        </div>
+    </section>
+
+
+    <section id="imageBackground">
+
+        <!--BRIANNA'S TILE-->
+        <div id="container">
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <p class="title is-5">Is Mercury currently in Retrograde?</p>
+                        <p class="subtitle" id="retrograde"></p>
+                        <p id="meaning"></p>
+
+                        <!--CREATING CALENDAR-->
+                        <div class="month">
+                            <ul>
+
+                                <li id="month"></li>
+                                <li id="year"></li>
+
+                                <!-- <span id="year" style="font-size:16px"></span> -->
+
+                            </ul>
+                        </div>
+
+                        <ul class="days">
+                            <li><button>1</button></li>
+                            <li><button>2</button></li>
+                            <li><button>3</button></li>
+                            <li><button>4</button></li>
+                            <li><button>5</button></li>
+                            <li><button>6</button></li>
+                            <li><button>7</button></li>
+                            <li><button>8</button></li>
+                            <li><button>9</button></li>
+                            <li><button>10</button></li>
+                            <li><button>11</button></li>
+                            <li><button>12</button></li>
+                            <li><button>13</button></li>
+                            <li><button>14</button></li>
+                            <li><button>15</button></li>
+                            <li><button>16</button></li>
+                            <li><button>17</button></li>
+                            <li><button>18</button></li>
+                            <li><button>19</button></li>
+                            <li><button>20</button></li>
+                            <li><button>21</button></li>
+                            <li><button>22</button></li>
+                            <li><button>23</button></li>
+                            <li><button>24</button></li>
+                            <li><button>25</button></li>
+                            <li><button>26</button></li>
+                            <li><button>27</button></li>
+                            <li><button>28</button></li>
+                            <li><button>29</button></li>
+                            <li><button>30</button></li>
+                            <li><button>31</button></li>
+
+
+                        </ul>
+                        <!--DATE SEARCH-->
+                        <form id="date-form" type="date" class="text">
+
+                            <input class="input" type="text/date" placeholder="Ex: 12/02/2019..." id="date-text">
+                        </form>
+                        <br>
+                        <p id="answer"></p>
+
+
+                    </article>
+
+
+
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <p class="title is-5">Your Sign's Spotify Playlist</p>
+                        <!-- <p class="subtitle"></p> -->
+                        <br>
+                        <p class="SpotifyDiv">
+                            <iframe id="spotifyFrame" title="Spotify Playlist by Sign" width="95%" height="200"
+                                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2DC3Q7JOmYe">
+                                <!-- http://mistymountaindesign.com/ -->
+                            </iframe>
+                        </p>
+                    </article>
+                </div>
+
+
+
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <p class="title is-5">Third column</p>
+                        <p class="subtitle">With some content</p>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                                pellentesque
+                                tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                            </p>
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="zodiac-wrapper">
+                <a href="#"><span class="zodiac flaticon-aquarius"></span></a>
+                <a href="#"><span class="zodiac flaticon-pisces"><span></a>
+                <a href="#"><span class="zodiac flaticon-aries"></span></a>
+                <a href="#"><span class="zodiac flaticon-taurus"></span></a>
+                <a href="#"><span class="zodiac flaticon-gemini"><span></a>
+                <a href="#"><span class="zodiac flaticon-cancer"></span></a>
+                <a href="#"><span class="zodiac flaticon-leo"></span></a>
+                <a href="#"><span class="zodiac flaticon-virgo"></span></a>
+                <a href="#"><span class="zodiac flaticon-libra"><span></a>
+                <a href="#"><span class="zodiac flaticon-scorpio"></span></a>
+                <a href="#"><span class="zodiac flaticon-sagittarius"><span></a>
+                <a href="#"><span class="zodiac flaticon-capricorn"></span></a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div>
+            <p>
+                Astrologizer site created by Team Hobbit: <a href="https://github.com/magsmagsmags">Margaret Keifer</a>,
+                <a href="https://github.com/Luke2theDuke">Luke Duquette</a>, and <a
+                    href="https://github.com/bwmccray">Brianna
+                    McCray</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/sdk.js"></script>
+
+</body>
+
+</html>

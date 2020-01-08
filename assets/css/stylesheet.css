@@ -1,0 +1,169 @@
+/* styling Nav Bar */
+.hero {
+    height: 100px;
+    
+}
+img {
+    position: absolute;
+    z-index: -1;
+    top: 1px;
+    /* height: 600px; */
+}
+
+footer{
+ position: fixed;
+ bottom: 0px;
+ width: 100%;
+ padding: 15px;
+ text-align:center;
+ background-color: #02d1b2;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #efefef;
+}
+
+h1 {
+    margin-right: 50px;
+}
+
+/* STYLING SEARCH BAR */
+form.styling input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  height: 30px;
+  width: 80%;
+  background: #f1f1f1;
+  margin: 15px 0;
+     
+}
+form.styling button {
+  border-radius: 5px;
+  margin: 14px 0;
+  /* bottom: 3px; */
+  width: 20%;
+  padding: 7px;
+  background: #2196F3;
+  color: white;
+  /* font-size: 17px; */
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+
+} 
+
+
+
+/* styling tiles */
+.tile.is-child {
+    opacity: 0.7;
+    margin: 50px!important;
+    height: 600px;
+    
+}
+
+/* styling footer */
+a{
+   color: #00d1b2;    
+}
+
+#zodiac-wrapper {
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+
+.zodiac::before {
+    font-size: 70px !important;
+    padding: 0px 20px 0px 20px;
+}
+
+
+p#retrograde {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Calendar for Retrograde */
+
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  /* padding: 5px; */
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+button {
+    border: none;
+}
+
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
