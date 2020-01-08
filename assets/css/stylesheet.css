@@ -153,6 +153,10 @@ button {
     border: none;
 }
 
+#planetTable {
+  word-wrap: break-word
+}
+
 
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {

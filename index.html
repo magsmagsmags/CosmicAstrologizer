@@ -6,19 +6,17 @@
     <title>Astrologizer</title>
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-   
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- <img src="index.ico" alt="Logo"> -->
     <script src="assets/js/moment.js"></script>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
-
     <script src="assets/js/javaScript.js"></script>
+
     <link rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
 
 <body>
-
     <section class="hero is-primary">
         <div class="hero-body">
             <h1 class="title">
@@ -26,10 +24,7 @@
             </h1>
         </div>
     </section>
-
-
     <section id="imageBackground">
-
         <!--BRIANNA'S TILE-->
         <div id="container">
             <div class="tile is-ancestor">
@@ -38,19 +33,14 @@
                         <p class="title is-5">Is Mercury currently in Retrograde?</p>
                         <p class="subtitle" id="retrograde"></p>
                         <p id="meaning"></p>
-
                         <!--CREATING CALENDAR-->
                         <div class="month">
                             <ul>
-
                                 <li id="month"></li>
                                 <li id="year"></li>
-
                                 <!-- <span id="year" style="font-size:16px"></span> -->
-
                             </ul>
                         </div>
-
                         <ul class="days">
                             <li><button>1</button></li>
                             <li><button>2</button></li>
@@ -83,54 +73,130 @@
                             <li><button>29</button></li>
                             <li><button>30</button></li>
                             <li><button>31</button></li>
-
-
                         </ul>
                         <!--DATE SEARCH-->
                         <form id="date-form" type="date" class="text">
-
                             <input class="input" type="text/date" placeholder="Ex: 12/02/2019..." id="date-text">
                         </form>
                         <br>
                         <p id="answer"></p>
-
-
                     </article>
-
-
-
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p class="title is-5">Your Sign's Spotify Playlist</p>
                         <!-- <p class="subtitle"></p> -->
                         <br>
-                        <p class="SpotifyDiv">
-                            <iframe id="spotifyFrame" title="Spotify Playlist by Sign" width="95%" height="200"
-                                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2DC3Q7JOmYe">
+                        <div id="spotifyDiv">
+                            <iframe id="spotifyFrame" title="Spotify Playlist by Sign" width="95%" height="200">
                                 <!-- http://mistymountaindesign.com/ -->
                             </iframe>
-                        </p>
+                        </div>
+                        <button id="gemini">Gemini</button>
                     </article>
                 </div>
-
-
-
                 <div class="tile is-parent">
                     <article class="tile is-child box">
-                        <p class="title is-5">Third column</p>
-                        <p class="subtitle">With some content</p>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
-                                pellentesque
-                                tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                            </p>
+                        <p class="title is-5">Your Sign's Ruling Planet</p>
+                        <p class="subtitle">In astrology, each zodiac sign has a ruling planet. The following shows the
+                            planets that rule each sign. Note that we’ve added the classical rulers of signs in the
+                            fourth column, when applicable. These rulers were assigned to the signs before Uranus,
+                            Neptune, and Pluto were discovered. These classical rulers are still used by some
+                            astrologers. Note also that some
+                            planets rule two signs.</p>
+                        <br>
+                        <p id="planetLink">Learn more <a
+                                href="https://cafeastrology.com/articles/sign-rulerships.html">here</a> and <a
+                                href="https://www.liveabout.com/ruling-planets-of-the-zodiac-signs-4686674">here</a></p>
+                        <div class="content" style="width: 10em; height: 1.2em; overflow: auto; white-space: nowrap;">
+                            <p></p>
+                            <br>
+                            <table id="planetTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Birth Date</th>
+                                        <th scope="col">Sign</th>
+                                        <th scope="col">Ruling Planet</th>
+                                        <th scope="col">Classical Planet Rulers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1/20 - 2/18</th>
+                                        <td>Aquarius</td>
+                                        <td>Uranus</td>
+                                        <td>Saturn</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2/19 - 3/20</th>
+                                        <td>Pisces</td>
+                                        <td>Neptune</td>
+                                        <td>Jupiter</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3/21 - 4/19</th>
+                                        <td>Aries</td>
+                                        <td colspan="2">Mars</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4/20 - 5/20</th>
+                                        <td>Taurus</td>
+                                        <td colspan="2">Venus</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5/21 - 6/20</th>
+                                        <td colspan="2">Gemini</td>
+                                        <td colspan="2">Mercury</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6/21 - 7/22</th>
+                                        <td>Cancer</td>
+                                        <td colspan="2">Moon</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7/23 - 8/22</th>
+                                        <td>Leo</td>
+                                        <td colspan="2">Sun</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">8/23 - 9/22</th>
+                                        <td>Virgo</td>
+                                        <td colspan="2">Mercury</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">9/23 - 10/22</th>
+                                        <td>Libra</td>
+                                        <td colspan="2">Venus</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10/23 - 11/21</th>
+                                        <td>Scorpio</td>
+                                        <td>Pluto</td>
+                                        <td>Mars</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">11/22 - 12/21</th>
+                                        <td>Sagittarius</td>
+                                        <td colspan="2">Jupiter</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">12/22 - 1/19</th>
+                                        <td>Capricorn</td>
+                                        <td colspan="2">Saturn</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
 
                         </div>
                     </article>
                 </div>
             </div>
-
             <div id="zodiac-wrapper">
                 <a href="#"><span class="zodiac flaticon-aquarius"></span></a>
                 <a href="#"><span class="zodiac flaticon-pisces"><span></a>
@@ -145,23 +211,9 @@
                 <a href="#"><span class="zodiac flaticon-sagittarius"><span></a>
                 <a href="#"><span class="zodiac flaticon-capricorn"></span></a>
             </div>
-
         </div>
     </section>
-
-
-
-
     <!-- test test test -->
-
-
-
-
-
-
-
-
-
     <footer>
         <div>
             <p>
@@ -172,12 +224,8 @@
             </p>
         </div>
     </footer>
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/sdk.js"></script>
-
 </body>
 
 </html>
