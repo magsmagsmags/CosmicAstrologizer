@@ -1,15 +1,22 @@
-/* styling Nav Bar */
-.hero {
-    height: 100px;
-    
+a{
+  color: #00d1b2;    
 }
-img {
+
+/* STYLING HEADER WITH ZODIAC SIGNS */
+.header {
+  background-color: #fff;
+  padding: 20px 0px 20px 0px;
+}
+
+/* STYLING BACKGROUND IMAGE FROM NASA */
+#imageBackground img {
     position: absolute;
     z-index: -1;
     top: 1px;
     /* height: 600px; */
 }
 
+/* STYLING FOOTER */
 footer{
  position: fixed;
  bottom: 0px;
@@ -67,25 +74,6 @@ form.styling button {
     height: 600px;
     
 }
-
-/* styling footer */
-a{
-   color: #00d1b2;    
-}
-
-#zodiac-wrapper {
-    text-align: center;
-    width: 100%;
-    background-color: #fff;
-    padding: 0px;
-    margin: 0px;
-}
-
-.zodiac::before {
-    font-size: 70px !important;
-    padding: 0px 20px 0px 20px;
-}
-
 
 p#retrograde {
     font-size: 18px;
@@ -153,11 +141,6 @@ button {
     border: none;
 }
 
-#planetTable {
-  word-wrap: break-word
-}
-
-
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
   .weekdays li, .days li {width: 13.1%;}
@@ -170,4 +153,47 @@ button {
 
 @media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
+}
+
+/* STYLING FOR THE ZODIAC BUTTONS TITLE */
+
+.zodiac-btn {
+   width: 80px;
+   height: 80px;
+   font-family: 'Ubuntu', sans-serif;
+   color: #333;
+   -webkit-border-radius: 30px;
+   -moz-border-radius: 30px;
+   border-radius: 20px;
+   border: 1px solid #999;
+   background-color: white;
+   cursor: pointer;
+   margin: 10px;
+}
+
+.zodiac-btn:hover {
+   background-color: #efefef;
+}
+
+.zodiac-btn img {
+   margin: 0 auto;
+   width: 50px;
+   padding: 2px
+}
+
+/* STYLING FOR THE GET ASTROLOGIZED TITLE */
+.zodiac-title {
+   text-align: center;
+   font-size: 26px;
+   font-weight:bold;
+   color: #333;
+   font-family: 'Ubuntu', sans-serif;
+   padding-bottom: 10px;
+}
+
+/* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
+
+.zodiac-sign-name {
+   font-weight: bold;
+   margin: 0 auto;
 }
