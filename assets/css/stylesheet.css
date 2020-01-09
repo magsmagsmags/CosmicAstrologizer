@@ -84,7 +84,7 @@ p#retrograde {
     margin-bottom: 5px;
     display: inline;
 }
-.title.is-5 {
+.answerDisplay {
   display: inline;
   
 }
@@ -163,6 +163,24 @@ li.prev {
 .prev:hover {
   cursor: pointer;
 }
+
+
+/* MOTHER PLANET INFO */
+
+/* #planetTable {
+
+  box-sizing: border-box;
+  display: table;
+  position: relative;
+  font-size: 12px;
+  /* width: 50px;
+  height: 50px; */
+  /* overflow: auto;
+  text-overflow: ellipsis; */
+  
+  /* style="width: 10em; height: 1.2em; display:table; overflow-x:auto; text-overflow: ellipsis; white-space: nowrap;" */
+
+  
 
 
 
