@@ -168,7 +168,15 @@ li.prev {
 
 
 
-/* STYLING FOR THE ZODIAC BUTTONS TITLE */
+/* STYLING FOR THE ZODIAC BUTTONS */
+
+.column {
+  text-align: center;
+}
+
+.columns.is-gapless:not(:last-child) {
+  margin-bottom: -0.5rem;
+}
 
 .zodiac-btn {
    width: 80px;
@@ -181,7 +189,7 @@ li.prev {
    border: 1px solid #999;
    background-color: white;
    cursor: pointer;
-   margin: 10px;
+   margin: 0 auto;
 }
 
 .zodiac-btn:hover {
@@ -191,9 +199,9 @@ li.prev {
 .zodiac-btn img {
   margin: 3px;
   width: 50px;
-   padding: 0px;
-   border: 2px solid #fff;
-   border-radius: 25px;
+  padding: 0px;
+  border: 2px solid #fff;
+  border-radius: 25px;
 }
 
 /* STYLING FOR THE GET ASTROLOGIZED TITLE */
@@ -210,9 +218,10 @@ li.prev {
 .zodiac-sign-name {
    font-weight: bold;
    margin: 0 auto;
+   font-size:10px;
 }
-/* 
-STYLING FOR IFRAME TAG */
+
+/* STYLING FOR IFRAME TAG */
 
 iframe {
   height: 460px;
@@ -229,7 +238,7 @@ iframe {
 
 
 /* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
+/* @media screen and (max-width:720px) {
   .weekdays li, .days li {width: 13.1%;}
 }
 
@@ -240,4 +249,67 @@ iframe {
 
 @media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
+} */
+
+
+/*  SCREEN SIZE MEDIA QUERIES TO CHANGE THE LAYOUT OF THE ZODIAC BUTTONS */
+
+@media screen and (min-width: 1408px) {
+  #zodiac-signs {
+    max-width: 1344px;
+  }
+  #zodiac-signs-3-row {
+    display: none;
+  }
+  #zodiac-signs-2-row {
+    display: none;
+  }
+  #zodiac-signs-1-row {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1408px) {
+  #zodiac-signs {
+    max-width: 860px;
+  }
+  #zodiac-signs-3-row {
+    display: none;
+  }
+  #zodiac-signs-2-row {
+    display: block;
+  }
+  #zodiac-signs-1-row {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1216px) {
+  #zodiac-signs {
+    max-width: 860px;
+  }
+  #zodiac-signs-3-row {
+    display: none;
+  }
+  #zodiac-signs-2-row {
+    display: block;
+  }
+  #zodiac-signs-1-row {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #zodiac-signs {
+    max-width: 500px;
+  }
+  #zodiac-signs-3-row {
+    display: block;
+  } 
+  #zodiac-signs-2-row {
+    display: none;
+  }
+  #zodiac-signs-1-row {
+    display: none;
+  }
 }
