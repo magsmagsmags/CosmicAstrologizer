@@ -24,10 +24,13 @@ footer{
  padding: 15px;
  text-align:center;
  background-color: #02d1b2;
+ font-size: 14px;
 }
 
 footer a {
-    color: #fff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-style: italic;
 }
 
 footer a:hover {
@@ -50,6 +53,7 @@ form.styling input[type=text] {
   margin: 15px 0;
      
 }
+
 form.styling button {
   border-radius: 5px;
   margin: 14px 0;
@@ -173,13 +177,15 @@ button {
 }
 
 .zodiac-btn:hover {
-   background-color: #efefef;
+   background-color: #00d1b2;
 }
 
 .zodiac-btn img {
-   margin: 0 auto;
-   width: 50px;
-   padding: 2px
+  margin: 3px;
+  width: 50px;
+   padding: 0px;
+   border: 2px solid #fff;
+   border-radius: 25px;
 }
 
 /* STYLING FOR THE GET ASTROLOGIZED TITLE */
@@ -193,8 +199,13 @@ button {
 }
 
 /* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
-
 .zodiac-sign-name {
    font-weight: bold;
    margin: 0 auto;
+   font-size: 10px;
 }
+
+/* @media screen and (min-width: 1024px)
+.container {
+    max-width: 960px;
+} */
