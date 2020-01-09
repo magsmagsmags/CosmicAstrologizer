@@ -295,7 +295,7 @@
                         <p class="title is-5 answerDisplay">Is Mercury currently in Retrograde?</p>
                         <p class="subtitle" id="retrograde"></p>
                         <p id="meaning"></p>
-
+                      
                         <!--CREATING CALENDAR-->
                         <div class="month">
                             <ul>
@@ -347,11 +347,14 @@
 
 
                         </ul>
+
                         <!--DATE SEARCH-->
                         <form id="date-form" type="date" class="text">
 
-                            <input class="input" type="text/date" placeholder="Ex: 12/02/2019..." id="date-text">
+                            <input class="input" type="date" placeholder="Ex: 12/02/2019..." method="POST" id="date-text">
+                            <button id="searchDate">Check a Date!</button>
                         </form>
+
                         <br>
                         <p id="answer"></p>
 
