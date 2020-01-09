@@ -78,7 +78,13 @@ form.styling button {
 p#retrograde {
     font-size: 18px;
     margin-bottom: 5px;
+    display: inline;
 }
+.title.is-5 {
+  display: inline;
+  
+}
+
 
 /* Calendar for Retrograde */
 
@@ -86,7 +92,7 @@ ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
 .month {
-  /* padding: 5px; */
+  
   width: 100%;
   background: #1abc9c;
   text-align: center;
@@ -121,6 +127,9 @@ body {font-family: Verdana, sans-serif;}
   background: #eee;
   margin: 0;
 }
+.days:hover {
+  cursor: pointer;
+}
 
 .days li {
   list-style-type: none;
@@ -137,24 +146,23 @@ body {font-family: Verdana, sans-serif;}
   background: #1abc9c;
   color: white !important
 }
-button {
-    border: none;
+
+li.next {
+  margin-right: 10px;
+}
+li.prev {
+  margin-left: 10px;
+}
+.next:hover {
+  cursor: pointer;
+}
+.prev:hover {
+  cursor: pointer;
 }
 
 
-/* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
-  .weekdays li, .days li {width: 13.1%;}
-}
 
-@media screen and (max-width: 420px) {
-  .weekdays li, .days li {width: 12.5%;}
-  .days li .active {padding: 2px;}
-}
 
-@media screen and (max-width: 290px) {
-  .weekdays li, .days li {width: 12.2%;}
-}
 
 /* STYLING FOR THE ZODIAC BUTTONS TITLE */
 
@@ -197,4 +205,34 @@ button {
 .zodiac-sign-name {
    font-weight: bold;
    margin: 0 auto;
+}
+/* 
+STYLING FOR IFRAME TAG */
+
+iframe {
+  height: 460px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;  
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from {top: -15px;}
+  to {top: 25px;}
+}
+
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
 }
