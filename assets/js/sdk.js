@@ -15,14 +15,14 @@ $(document).ready(function () {
     $(monthEl).text(monthDisplay)
     $(yearEl).append(yearDisplay);
 
-    console.log(monthEl.val());
-
-
+    console.log(monthEl.val());   
+     
+   
     
    
    
    
-   //calendar click functions
+    //calendar click functions
 
 
     $(".calendarNum").on("click", function() {
@@ -103,10 +103,8 @@ $(document).ready(function () {
 
         event.preventDefault();
         answerEl.empty();
-        console.log("Hello");
-        
-        
-    
+        console.log("Hello");    
+           
 
         //grabbing user text date and putting it in variable
         var userDate = $("#date-text").val();
