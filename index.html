@@ -14,7 +14,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
 
-    <script src="assets/js/javaScript.js"></script>
+    
     <link rel="stylesheet" href="assets/css/stylesheet.css">
 </head>
 
@@ -40,7 +40,7 @@
             <nav class="level">
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="aries" class='zodiac-btn'>
                             <img src="assets/img/zodiac/aries.png">
                             <span class="zodiac-sign-name">Aries</span>
                         </button>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="taurus" class='zodiac-btn'>
                             <img src="assets/img/zodiac/taurus.png">
                             <span class="zodiac-sign-name">Taurus</span>
                         </button>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="gemini" class='zodiac-btn'>
                             <img src="assets/img/zodiac/gemini.png">
                             <span class="zodiac-sign-name">Gemini</span>
                         </button>
@@ -64,21 +64,21 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="cancer" class='zodiac-btn'>
                             <img src="assets/img/zodiac/cancer.png">
                             <span class="zodiac-sign-name">Cancer</span>
                         </button>
                     </div>
                 </div>
                 <div class="level-item has-text-centered">
-                    <button class='zodiac-btn'>
+                    <button id="virgo" class='zodiac-btn'>
                         <img src="assets/img/zodiac/virgo.png">
                         <span class="zodiac-sign-name">Virgo</span>
                     </button>
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="libra" class='zodiac-btn'>
                             <img src="assets/img/zodiac/libra.png">
                             <span class="zodiac-sign-name">Libra</span>
                         </button>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="scorpio" class='zodiac-btn'>
                             <img src="assets/img/zodiac/scorpio.png">
                             <span class="zodiac-sign-name">Scorpio</span>
                         </button>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="sagittarius" class='zodiac-btn'>
                             <img src="assets/img/zodiac/sagittarius.png">
                             <span class="zodiac-sign-name">Sagittarius</span>
                         </button>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="capricorn" class='zodiac-btn'>
                             <img src="assets/img/zodiac/capricorn.png">
                             <span class="zodiac-sign-name">Capricorn</span>
                         </button>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="aquarius" class='zodiac-btn'>
                             <img src="assets/img/zodiac/aquarius.png">
                             <span class="zodiac-sign-name">Aquarius</span>
                         </button>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                        <button class='zodiac-btn'>
+                        <button id="pisces" class='zodiac-btn'>
                             <img src="assets/img/zodiac/pisces.png">
                             <span class="zodiac-sign-name">Pisces</span>
                         </button>
@@ -136,16 +136,20 @@
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <article class="tile is-child box">
-                        <p class="title is-5">Is Mercury currently in Retrograde?</p>
+                        <p class="title is-5 answerDisplay">Is Mercury currently in Retrograde?</p>
                         <p class="subtitle" id="retrograde"></p>
                         <p id="meaning"></p>
 
                         <!--CREATING CALENDAR-->
                         <div class="month">
                             <ul>
-
+                                <li class="prev">&#10094;</li>
+                                
+                                <li class="next">&#10095;</li>
+                                
                                 <li id="month"></li>
                                 <li id="year"></li>
+
 
                                 <!-- <span id="year" style="font-size:16px"></span> -->
 
@@ -153,37 +157,37 @@
                         </div>
 
                         <ul class="days">
-                            <li><button>1</button></li>
-                            <li><button>2</button></li>
-                            <li><button>3</button></li>
-                            <li><button>4</button></li>
-                            <li><button>5</button></li>
-                            <li><button>6</button></li>
-                            <li><button>7</button></li>
-                            <li><button>8</button></li>
-                            <li><button>9</button></li>
-                            <li><button>10</button></li>
-                            <li><button>11</button></li>
-                            <li><button>12</button></li>
-                            <li><button>13</button></li>
-                            <li><button>14</button></li>
-                            <li><button>15</button></li>
-                            <li><button>16</button></li>
-                            <li><button>17</button></li>
-                            <li><button>18</button></li>
-                            <li><button>19</button></li>
-                            <li><button>20</button></li>
-                            <li><button>21</button></li>
-                            <li><button>22</button></li>
-                            <li><button>23</button></li>
-                            <li><button>24</button></li>
-                            <li><button>25</button></li>
-                            <li><button>26</button></li>
-                            <li><button>27</button></li>
-                            <li><button>28</button></li>
-                            <li><button>29</button></li>
-                            <li><button>30</button></li>
-                            <li><button>31</button></li>
+                            <li class="calendarNum" value="1">1</li>
+                            <li class="calendarNum" value="2">2</liclass="calendarNum" value="2">
+                            <li class="calendarNum" value="3">3</li>
+                            <li class="calendarNum" value="4">4</li>
+                            <li class="calendarNum" value="5">5</li>
+                            <li class="calendarNum" value="6">6</li>
+                            <li class="calendarNum" value="7">7</li>
+                            <li class="calendarNum" value="8">8</li>
+                            <li class="calendarNum" value="9">9</li>
+                            <li class="calendarNum" value="10">10</li>
+                            <li class="calendarNum" value="11">11</li>
+                            <li class="calendarNum" value="12">12</li>
+                            <li class="calendarNum" value="13">13</li>
+                            <li class="calendarNum" value="14">14</li>
+                            <li class="calendarNum" value="15">15</li>
+                            <li class="calendarNum" value="16">16</li>
+                            <li class="calendarNum" value="17">17</li>
+                            <li class="calendarNum" value="18">18</li>
+                            <li class="calendarNum" value="19">19</li>
+                            <li class="calendarNum" value="20">20</li>
+                            <li class="calendarNum" value="21">21</li>
+                            <li class="calendarNum" value="22">22</li>
+                            <li class="calendarNum" value="23">23</li>
+                            <li class="calendarNum" value="24">24</li>
+                            <li class="calendarNum" value="25">25</li>
+                            <li class="calendarNum" value="26">26</li>
+                            <li class="calendarNum" value="27">27</li>
+                            <li class="calendarNum" value="28">28</li>
+                            <li class="calendarNum" value="29">29</li>
+                            <li class="calendarNum" value="30">30</li>
+                            <li class="calendarNum" value="31">31</li>
 
 
                         </ul>
@@ -206,12 +210,15 @@
                         <p class="title is-5">Your Sign's Spotify Playlist</p>
                         <!-- <p class="subtitle"></p> -->
                         <br>
-                        <p class="SpotifyDiv">
-                            <iframe id="spotifyFrame" title="Spotify Playlist by Sign" width="95%" height="200"
-                                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2DC3Q7JOmYe">
+                        <div id="spotifyDiv">
+                            <iframe id="spotifyFrame" title="Spotify Playlist by Sign" width="95%" height="200">
                                 <!-- http://mistymountaindesign.com/ -->
-                            </iframe>
-                        </p>
+                            </iframe> 
+                        </div>
+
+                        
+
+
                     </article>
                 </div>
 
@@ -310,6 +317,8 @@
                         </div>
                     </article>
                 </div>
+
+                
             </div>
 
 
@@ -346,6 +355,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/sdk.js"></script>
+    <script src="assets/js/javaScript.js"></script>
 
 </body>
 
