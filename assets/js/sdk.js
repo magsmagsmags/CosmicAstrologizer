@@ -1,29 +1,3 @@
-//From astrology Api github Repo
-// HTML
-//object
-// div 
-// 3 columns
-// 1st column 
-// Mercury Retrograde API
-// API dump
-// (Date Input) (Submit button)
-//2nd column
-// What's your sign
-// (buttons) (submit)
-// Spotify playlist API dump
-// 3rd column
-//Mother Planet
-// image
-// textbox explaiing what that mean's and each signs' planets
-// NASA image of the day API
-//background
-// JAVASCRIPT
-//variables
-//signs array 
-// var signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
-//Client ID fa4347351fa54d869af431cb5a0e79d5
-//Client Secret 31727c46061146fbbab0c6c4933bfa74
-//figure out how to update the calendar, add an input for users to pick a date. Highlight that date. put my no next to my title to add space, or lengthen the tiles? 
 $(document).ready(function () {
     //global variables
     var currentDay = moment().format("YYYYMMDD");
