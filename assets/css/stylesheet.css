@@ -16,59 +16,50 @@ a{
     /* height: 600px; */
 }
 
-/* STYLING FOOTER */
-footer{
- position: fixed;
- bottom: 0px;
- width: 100%;
- padding: 15px;
- text-align:center;
- background-color: #02d1b2;
- font-size: 14px;
-}
 
-footer a {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-style: italic;
-}
+/* STYLING FOR THE ZODIAC BUTTONS TITLE */
 
-footer a:hover {
-    color: #efefef;
-}
-
-h1 {
-    margin-right: 50px;
-}
-
-/* STYLING SEARCH BAR */
-form.styling input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  height: 30px;
-  width: 80%;
-  background: #f1f1f1;
-  margin: 15px 0;
-     
-}
-
-form.styling button {
-  border-radius: 5px;
-  margin: 14px 0;
-  /* bottom: 3px; */
-  width: 20%;
-  padding: 7px;
-  background: #2196F3;
-  color: white;
-  /* font-size: 17px; */
-  border: 1px solid grey;
-  border-left: none;
+.zodiac-btn {
+  width: 80px;
+  height: 80px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #333;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background-color: white;
   cursor: pointer;
+  margin: 10px;
+}
 
-} 
+.zodiac-btn:hover {
+  background-color: #00d1b2;
+}
 
+.zodiac-btn img {
+ margin: 3px;
+ width: 50px;
+  padding: 0px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+}
+
+/* STYLING FOR THE GET ASTROLOGIZED TITLE */
+.zodiac-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight:bold;
+  color: #333;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 10px;
+}
+
+/* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
+.zodiac-sign-name {
+  font-weight: bold;
+  margin: 0 auto;
+}
 
 
 /* styling tiles */
@@ -89,146 +80,6 @@ p#retrograde {
   
 }
 
-
-/* Calendar for Retrograde */
-
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-.month {
-  
-  width: 100%;
-  background: #1abc9c;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.month ul {
-  margin: 0;
-  padding: 0;
-}
-
-.month ul li {
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-
-}
-
-.month .prev {
-  float: left;
-  padding-top: 10px;
-}
-
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
-
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
-.days:hover {
-  cursor: pointer;
-}
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
-}
-
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
-}
-
-li.next {
-  margin-right: 10px;
-}
-li.prev {
-  margin-left: 10px;
-}
-.next:hover {
-  cursor: pointer;
-}
-.prev:hover {
-  cursor: pointer;
-}
-
-
-/* MOTHER PLANET INFO */
-
-/* #planetTable {
-
-  box-sizing: border-box;
-  display: table;
-  position: relative;
-  font-size: 12px;
-  /* width: 50px;
-  height: 50px; */
-  /* overflow: auto;
-  text-overflow: ellipsis; */
-  
-  /* style="width: 10em; height: 1.2em; display:table; overflow-x:auto; text-overflow: ellipsis; white-space: nowrap;" */
-
-  
-
-
-
-
-
-/* STYLING FOR THE ZODIAC BUTTONS TITLE */
-
-.zodiac-btn {
-   width: 80px;
-   height: 80px;
-   font-family: 'Ubuntu', sans-serif;
-   color: #333;
-   -webkit-border-radius: 30px;
-   -moz-border-radius: 30px;
-   border-radius: 20px;
-   border: 1px solid #999;
-   background-color: white;
-   cursor: pointer;
-   margin: 10px;
-}
-
-.zodiac-btn:hover {
-   background-color: #00d1b2;
-}
-
-.zodiac-btn img {
-  margin: 3px;
-  width: 50px;
-   padding: 0px;
-   border: 2px solid #fff;
-   border-radius: 25px;
-}
-
-/* STYLING FOR THE GET ASTROLOGIZED TITLE */
-.zodiac-title {
-   text-align: center;
-   font-size: 26px;
-   font-weight:bold;
-   color: #333;
-   font-family: 'Ubuntu', sans-serif;
-   padding-bottom: 10px;
-}
-
-/* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
-.zodiac-sign-name {
-   font-weight: bold;
-   margin: 0 auto;
-}
 /* 
 STYLING FOR IFRAME TAG */
 
@@ -244,6 +95,31 @@ iframe {
   from {top: -15px;}
   to {top: 25px;}
 }
+
+/* STYLING FOOTER */
+footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 15px;
+  text-align:center;
+  background-color: #02d1b2;
+  font-size: 14px;
+ }
+ 
+ footer a {
+     color: rgb(0, 0, 0);
+     font-weight: bold;
+     font-style: italic;
+ }
+ 
+ footer a:hover {
+     color: #efefef;
+ }
+ 
+ h1 {
+     margin-right: 50px;
+ }
 
 
 /* Add media queries for smaller screens */
