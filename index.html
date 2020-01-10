@@ -18,10 +18,10 @@
 </head>
 
 <body>
-    <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <a class="navbar-item" href="#">
-                <img src="assets/img/astrologizer-logo-black.png" alt="Astrologizer logo">
+                <img src="assets/img/astrologizer-logo.png" alt="Astrologizer logo">
             </a>
             <!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -31,11 +31,43 @@
         </div>
     </nav>
 
+    <section class="hero is-medium is-dark is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column is-two-thirds">
+                        <h1 class="title">
+                            As above, so below...
+                        </h1>
+                        <br>
+                        <h2 class="subtitle">
+                            Once you begin to pay attention to how events in your life change during the different
+                            astrological phases, you will soon see how important it is to take note of them. You will
+                            begin to understand that there is a fractal relationship between the orbits in the heavens
+                            and human activity down here on Earth.
+                        </h2>
+                    </div>
+                    <div class="column is-one-third">
+                        <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank">
+                            <div id="imageBackground"></div>
+                        </a>
+                        <span id="iotd-caption">Image Caption - can we pull this from API?</span><br>
+                        <span id="iotd-source">Image Source: <a href="https://apod.nasa.gov/apod/astropix.html">NASA
+                                Astronomy Photo Of The Day</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
     <section class="header">
         <div class="container" id="zodiac-signs">
-            <p class="zodiac-title">
+            <div class="zodiac-title">
                 Select Your Sign To Get Astrologized!
-            </p>
+            </div>
             <!-- START ZODIAC BUTTON SECTION @ XS-M SCREEN SIZE -->
             <!-- ROW 1 -->
             <section id="zodiac-signs-3-row">
@@ -311,546 +343,185 @@
         </div>
     </section>
 
+    <section class="container is-fluid" id="tile-container">
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-8">
+                <div class="tile">
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child box">
+                            <p class="title is-5 answerDisplay">Is Mercury currently in Retrograde?</p>
+                            <p class="subtitle" id="retrograde"></p>
+                            <p>We classify Mercury Retrograde as the periods of time throughut the year when the planet
+                                appears to be moving away from Earth. Mercury Retrograde has negative influences on
+                                communication, travel, and technology.
+                            </p>
+                            <p>
+                                Some fancy stuff that Mags said will go here about Mercury Retrograde.
+                            </p>
+                            <p>
+                                Keeping track of Mercury retrograde periods can allow you to increase your productivity
+                                and avoid at least some of the frustration they can bring about.
+                                <button id="mrModal">Learn More...</button>
+                            </p>
+                            <div class="mrBtn">
 
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns">
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-image">
-                                <i class="fas fa-sitemap" style="font-size: 128px;"></i>
                             </div>
 
-                            <div class="content">
-                                <p class="zodiac-info">
-                                    There are 12 zodiac signs, and each sign has its own strengths and weaknesses, its
-                                    own specific traits, desires and attitude towards life and people.
-                                </p>
-                            </div>
-                        </div>
+                            <!--DATE SEARCH-->
+                            <form id="date-form" type="date" class="text">
+
+                                <input class="input" type="date" placeholder="Ex: 12/02/2019..." id="date-text">
+                                <button id="searchDate">Search a date</button>
+                            </form>
+                            <br>
+                            <p id="answer"></p>
+
+                        </article>
+                        <article class="tile is-child box">
+                            <!-- Put any content you want -->
+                        </article>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-image">
-                                <i class="fab fa-quinscape" style="font-size: 128px;"></i>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <p class="title is-5">Your Sign's Spotify Playlist</p>
+                            <p class="subtitle"></p>
+                            <div id="spotifyDiv">
+                                <iframe id="spotifyFrame" title="Spotify Playlist by Sign" width="95%" height="200">
+                                </iframe>
                             </div>
-
-                            <div class="content">
-                                <p class="zodiac-info">
-                                    By analyzing the projection of the position of planets, and the Sun
-                                    and the Moon on the Ecliptic at the moment of birth, Astrology can give us a glimpse
-                                    of a person's basic characteristics, preferences,
-                                    flaws and fears.
-                                </p>
-                            </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <p class="title is-5">Your Sign's Ruling Planet</p>
+                        <p class="subtitle">In astrology, each zodiac sign has a ruling planet. The following shows the
+                            planets that rule each sign. Note that we've added the classical rulers of signs in the
+                            fourth column, when applicable. These rulers were assigned to the signs before Uranus,
+                            Neptune, and Pluto were discovered. These classical rulers are still used by some
+                            astrologers. Note also that some
+                            planets rule two signs.</p>
+                        <br>
+                        <p id="planetLink">Learn more <a
+                                href="https://cafeastrology.com/articles/sign-rulerships.html">here</a> and
+                            <a href="https://www.liveabout.com/ruling-planets-of-the-zodiac-signs-4686674">here</a></p>
+                        <div class="content">
+                            <p></p>
+                            <br>
+                            <table id="planetTable"
+                                class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Birth Date</th>
+                                        <th scope="col">Sign</th>
+                                        <th scope="col">Ruling Planet</th>
+                                        <th scope="col">Classical Planet Rulers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1/20 - 2/18</th>
+                                        <td>Aquarius</td>
+                                        <td>Uranus</td>
+                                        <td>Saturn</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2/19 - 3/20</th>
+                                        <td>Pisces</td>
+                                        <td>Neptune</td>
+                                        <td>Jupiter</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3/21 - 4/19</th>
+                                        <td>Aries</td>
+                                        <td colspan="2">Mars</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4/20 - 5/20</th>
+                                        <td>Taurus</td>
+                                        <td colspan="2">Venus</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5/21 - 6/20</th>
+                                        <td colspan="2">Gemini</td>
+                                        <td colspan="2">Mercury</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6/21 - 7/22</th>
+                                        <td>Cancer</td>
+                                        <td colspan="2">Moon</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7/23 - 8/22</th>
+                                        <td>Leo</td>
+                                        <td colspan="2">Sun</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">8/23 - 9/22</th>
+                                        <td>Virgo</td>
+                                        <td colspan="2">Mercury</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">9/23 - 10/22</th>
+                                        <td>Libra</td>
+                                        <td colspan="2">Venus</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10/23 - 11/21</th>
+                                        <td>Scorpio</td>
+                                        <td>Pluto</td>
+                                        <td>Mars</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">11/22 - 12/21</th>
+                                        <td>Sagittarius</td>
+                                        <td colspan="2">Jupiter </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">12/22 - 1/19</th>
+                                        <td>Capricorn</td>
+                                        <td colspan="2">Saturn</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </div>
             </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
 
+                    <!-- <i class="fas fa-sitemap" style="font-size: 62px;"></i> -->
 
-        </div>
+                    <div class="content">
+                        <p class="subtitle"><i class="fab fa-quinscape"></i> <strong> General Astrology
+                                Information</strong></p>
+                        <p class="zodiac-info">
+                            There are 12 zodiac signs, and each sign has its own strengths and weaknesses, its
+                            own specific traits, desires and attitude towards life and people.
+                        </p>
+                    </div>
+
+                    <div class="content">
+                        <p class="zodiac-info">
+                            By analyzing the projection of the position of planets, and the Sun
+                            and the Moon on the Ecliptic at the moment of birth, Astrology can give us a glimpse
+                            of a person's basic characteristics, preferences,
+                            flaws and fears.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
 
+    <div class="tile is-parent">
+        <article class="tile is-child box">
 
-
-
-    <!-- START ARIES MODAL -->
-    <div class="modal" id="ariesModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>ARIES</strong>: March 21 – April 19<img
-                        src="assets/img/zodiac/aries.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/32/aries-759382_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>These individuals often have a
-                    very forceful confrontational voice. They are stubborn, egoistical, who show-off. They are fiercely
-                    independent, extremely competitive, freedom-loving, adventurous, enthusiastic, bold, athletic,
-                    impulsive, reckless, dynamic, powerful, overly-confident, loud, blunt, hasty, hard-headed, stubborn,
-                    strong-willed, hot-tempered, rude, selfish, impulsive, enterprising, risk-takers, and challengers.
-                    Aries
-                    tend to act first and think later.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
+        </article>
     </div>
-    <!-- END ARIES MODAL -->
-
-    <!-- START TAURUS MODAL -->
-    <div class="modal" id="taurusModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>TAURUS</strong>: April 20 - May 20<img
-                        src="assets/img/zodiac/taurus.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/32/bull-759381_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>People born under this sign love nice things; they can come across as extremely materialistic, or as
-                    people who enjoy the finer things in life. They are sometimes slow to act, great at managing money,
-                    lovers of the outdoors (and of doing outdoor activities such as farming or gardening), very
-                    practical and down to earth. Taurus people typically dislike change.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
     </div>
-    <!-- END TAURUS MODAL -->
-
-    <!-- START GEMENI MODAL-->
-    <div class="modal" id="gemeniModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>GEMENI</strong>: May 21 - June 20<img
-                        src="assets/img/zodiac/gemini.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/30/twins-759375_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>Geminis are usually good arguers, witty, adaptive, flirtatious, playful (but may come across as
-                    offensive), tricksters, inconsistent, easy to please, intellectual, chatty, quick-witted, social
-                    butterflies, knowledge-seeking, and changeable. They typically like reading, writing, and mental
-                    games, and are great at multitasking.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END GEMENI MODAL -->
-
-    <!-- START CANCER MODAL-->
-    <div class="modal" id="cancerModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>CANCER</strong>: June 21 - July 22<img
-                        src="assets/img/zodiac/cancer.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/31/cancer-759378_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>They are very sensitive (with unpredictable moods), romantic, nice, sweet, caring and nurturing,
-                    motherly, and homey. Cancer individuals like home-cooked meals and quality family time; they are
-                    socially conservative, and withdraw from the scene when hurt or offended.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END CANCER MODAL -->
-
-    <!-- START LEO MODAL-->
-    <div class="modal" id="leoModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>LEO</strong>: July 23 - August 22<img
-                        src="assets/img/zodiac/leo.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/30/lion-759374_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>Leos are loving and sensitive leaders. Leos love children, enjoy luxury and jewelry, and have a
-                    bigger-than-life dramatic attitude. Leos are show-offs, egoistical, dominant, powerful, determined,
-                    charismatic, very demanding, athletic, smart, arrogant, pompous, conceited, temperamental,
-                    competitive, passionate, stubborn, loud, loyal, strong-willed, and usually laid-back, but can be
-                    highly aggressive or even potentially destructive. They typically want to be the center of attention
-                    and have a tremendous sense of vitality.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END LEO MODAL -->
-
-    <!-- START VIRGO MODAL-->
-    <div class="modal" id="virgoModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>VIRGO</strong>: August 23 - September 22<img
-                        src="assets/img/zodiac/virgo.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/30/lion-759374_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>These individuals are usually considered perfectionists, critical, detail-oriented, fastidious,
-                    practical, intelligent, sharp-witted, with keen intellect and powers of observation, shrewd, and
-                    penetrating. They have great mental dexterity and try to live healthy lifestyles. They can be
-                    judgmental, opinionated, naturally shy, and organized. Virgos often like order and cleanliness, and
-                    they know how to effectively prove their point in an argument.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END VIRGO MODAL -->
-
-    <!-- START LIBRA MODAL-->
-    <div class="modal" id="libraModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>LIBRA</strong>: September 23 - October 22<img
-                        src="assets/img/zodiac/libra.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/31/horizontal-759380_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>Those born under the sign of Libra are intelligent, charming, flirtatious, frivolous, graceful, loyal
-                    and diplomatic. They like equality, justice, beauty, and beautiful things. They are usually
-                    considered social butterflies, polite, gracious, pleasantly mannered, idealistic, and peaceful.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END LIBRA MODAL -->
-
-    <!-- START SCORPIO MODAL-->
-    <div class="modal" id="scorpioModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>SCORPIO</strong>: October 23 - November 21<img
-                        src="assets/img/zodiac/scorpio.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/31/scorpio-759377_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>Scorpios are secretive, passionate, confident, loyal, athletic, hyper-sensitive, mysterious,
-                    penetrating, investigative, magnetic, strong-willed, resilient, powerful, sexual, resourceful,
-                    jealous, possessive, controlling, hot-tempered and revengeful. They typically have high levels of
-                    self-mastery in all areas. Scorpios are very private although they often seem like they're an open
-                    book. The are fascinated with topics of death and rebirth, this could be in any form, not
-                    necessarily human. It could be about giving up a possession or a job, or just changing the furniture
-                    arrangement in the house.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END SCORPIO MODAL -->
-
-    <!-- START SAGITTARIUS MODAL-->
-    <div class="modal" id="sagittariusModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>SAGITTARIUS</strong>: November 22 - December 21<img
-                        src="assets/img/zodiac/sagittarius.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/30/contactors-759373_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>They are adventurous, independent, friendly, enthusiastic, broad-minded, overly-optimistic, brave,
-                    intelligent, love theory, tend to apply textbook theory to their pursuits, tend to be
-                    over-achievers, charismatic, flirtatious, rebellious, and freedom-seeking. Sagittariuses dislike
-                    restrictions. They can be very cold when their freedom is challenged. They are talkative (although
-                    some are shy but even those ones open up a great deal when they begin to connect with someone),
-                    natural entertainers, impulsive, exaggerating, over-indulgent, blunt, risk-takers, with a childlike
-                    wonder. Sagittarius people are always hungry for knowledge, opportunistic, philanthropic, and
-                    philosophical.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END SAGITTARIUS MODAL -->
-
-    <!-- START CAPRICORN MODAL-->
-    <div class="modal" id="capricornModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>CAPRICORN</strong>: December 22 - January 19<img
-                        src="assets/img/zodiac/capricorn.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/31/capricorn-759379_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>Capricorns are ambitious, determined, patient, mature, powerful, achiever, mysterious (disappearing),
-                    reserved, and detached, cautious, hot-tempered generous hard workers. They are usually very
-                    ambitious and enjoy responsibility. They are self-disciplined and respect authority. They are
-                    career-oriented, with a remarkable capacity for endurance and patience. They possess a tough
-                    exterior to prevent others from hurting them. Inside the mysterious Capricorn is a charming and
-                    passionate human. They also possess a remarkable sense of humour.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END CAPRICORN MODAL -->
-
-    <!-- START AQUARIUS MODAL-->
-    <div class="modal" id="aquariusModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>AQUARIUS</strong>: January 20 - February 18<img
-                        src="assets/img/zodiac/aquarius.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/32/aquarius-759383_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>Aquarius people love to help others. They are liberal, democratic, humanitarians who are broad-minded
-                    and enjoy social equality. They are considered reformers, but can be cold and indifferent. They are
-                    often eccentric, erratic, rebellious, unpredictable, highly opinionated, original, one-of-a-kind,
-                    friendly, sharp-tongued, idealistic, inventive, quick to change their minds, and resolute.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END AQUARIUS MODAL -->
-
-    <!-- START PISCES MODAL-->
-    <div class="modal" id="piscesModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">&nbsp;<strong>PISCES</strong>: February 19 - March 20<img
-                        src="assets/img/zodiac/pisces.png" style="width:25px;float:left;">
-                </p>
-                <button class="delete" aria-label="close" data-bulma-modal="close"></button>
-            </header>
-            <section class="modal-card-body"><img
-                    src="https://cdn.pixabay.com/photo/2015/05/09/07/32/fish-759384_960_720.jpg"
-                    style="width:100%; border: 1px solid #333;border-radius: 15px;padding: 10px; margin:0 auto;">
-                <p>Independent, determined and innovative. They are highly creative, smart, passionate, sensitive and
-                    friendly. They like to take care of others, but are often viewed as offensive because of their
-                    changing temperaments.</p>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-dark" data-bulma-modal="close">Close</button>
-            </footer>
-        </div>
-    </div>
-    <!-- END PISCES MODAL -->
-
-
-
-    <!--BRIANNA'S TILE-->
-    <div class="container is-fluid is-dark">
-        <div class="tile is-ancestor">
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <p class="title is-5 answerDisplay">Is Mercury currently in Retrograde?</p>
-                    <p class="subtitle" id="retrograde"></p>
-                    <p id="meaning"></p>
-
-                    <!--CREATING CALENDAR-->
-                    <div class="month">
-                        <ul>
-                            <li class="prev">&#10094;</li>
-
-                            <li class="next">&#10095;</li>
-
-                            <li id="month"></li>
-                            <li id="year"></li>
-
-
-                            <!-- <span id="year" style="font-size:16px"></span> -->
-
-                        </ul>
-                    </div>
-
-                    <ul class="days">
-                        <li class="calendarNum" value="1">1</li>
-                        <li class="calendarNum" value="2">2</liclass="calendarNum" value="2">
-                        <li class="calendarNum" value="3">3</li>
-                        <li class="calendarNum" value="4">4</li>
-                        <li class="calendarNum" value="5">5</li>
-                        <li class="calendarNum" value="6">6</li>
-                        <li class="calendarNum" value="7">7</li>
-                        <li class="calendarNum" value="8">8</li>
-                        <li class="calendarNum" value="9">9</li>
-                        <li class="calendarNum" value="10">10</li>
-                        <li class="calendarNum" value="11">11</li>
-                        <li class="calendarNum" value="12">12</li>
-                        <li class="calendarNum" value="13">13</li>
-                        <li class="calendarNum" value="14">14</li>
-                        <li class="calendarNum" value="15">15</li>
-                        <li class="calendarNum" value="16">16</li>
-                        <li class="calendarNum" value="17">17</li>
-                        <li class="calendarNum" value="18">18</li>
-                        <li class="calendarNum" value="19">19</li>
-                        <li class="calendarNum" value="20">20</li>
-                        <li class="calendarNum" value="21">21</li>
-                        <li class="calendarNum" value="22">22</li>
-                        <li class="calendarNum" value="23">23</li>
-                        <li class="calendarNum" value="24">24</li>
-                        <li class="calendarNum" value="25">25</li>
-                        <li class="calendarNum" value="26">26</li>
-                        <li class="calendarNum" value="27">27</li>
-                        <li class="calendarNum" value="28">28</li>
-                        <li class="calendarNum" value="29">29</li>
-                        <li class="calendarNum" value="30">30</li>
-                        <li class="calendarNum" value="31">31</li>
-                    </ul>
-                    <!--DATE SEARCH-->
-                    <form id="date-form" type="date" class="text">
-
-                        <input class="input" type="text/date" placeholder="Ex: 12/02/2019..." id="date-text">
-                    </form>
-                    <br>
-                    <p id="answer"></p>
-
-
-                </article>
-
-
-
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <p class="title is-5">Your Sign's Spotify Playlist</p>
-                    <p class="subtitle"></p>
-                    <div id="spotifyDiv">
-                        <iframe id="spotifyFrame" title="Spotify Playlist by Sign" width="95%" height="200">
-                        </iframe>
-                    </div>
-                </article>
-            </div>
-
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <p class="title is-5">Your Sign's Ruling Planet</p>
-                    <p class="subtitle">In astrology, each zodiac sign has a ruling planet. The following shows the
-                        planets that rule each sign. Note that we've added the classical rulers of signs in the
-                        fourth column, when applicable. These rulers were assigned to the signs before Uranus,
-                        Neptune, and Pluto were discovered. These classical rulers are still used by some
-                        astrologers. Note also that some
-                        planets rule two signs.</p>
-                    <br>
-                    <p id="planetLink">Learn more <a
-                            href="https://cafeastrology.com/articles/sign-rulerships.html">here</a> and <a
-                            href="https://www.liveabout.com/ruling-planets-of-the-zodiac-signs-4686674">here</a></p>
-                    <div class="content">
-                        <p></p>
-                        <br>
-                        <table id="planetTable"
-                            class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Birth Date</th>
-                                    <th scope="col">Sign</th>
-                                    <th scope="col">Ruling Planet</th>
-                                    <th scope="col">Classical Planet Rulers</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1/20 - 2/18</th>
-                                    <td>Aquarius</td>
-                                    <td>Uranus</td>
-                                    <td>Saturn</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2/19 - 3/20</th>
-                                    <td>Pisces</td>
-                                    <td>Neptune</td>
-                                    <td>Jupiter</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3/21 - 4/19</th>
-                                    <td>Aries</td>
-                                    <td colspan="2">Mars</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4/20 - 5/20</th>
-                                    <td>Taurus</td>
-                                    <td colspan="2">Venus</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5/21 - 6/20</th>
-                                    <td colspan="2">Gemini</td>
-                                    <td colspan="2">Mercury</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6/21 - 7/22</th>
-                                    <td>Cancer</td>
-                                    <td colspan="2">Moon</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7/23 - 8/22</th>
-                                    <td>Leo</td>
-                                    <td colspan="2">Sun</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8/23 - 9/22</th>
-                                    <td>Virgo</td>
-                                    <td colspan="2">Mercury</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9/23 - 10/22</th>
-                                    <td>Libra</td>
-                                    <td colspan="2">Venus</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10/23 - 11/21</th>
-                                    <td>Scorpio</td>
-                                    <td>Pluto</td>
-                                    <td>Mars</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">11/22 - 12/21</th>
-                                    <td>Sagittarius</td>
-                                    <td colspan="2">Jupiter </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12/22 - 1/19</th>
-                                    <td>Capricorn</td>
-                                    <td colspan="2">Saturn</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </article>
-            </div>
-        </div>
     </div>
 
 

@@ -297,12 +297,12 @@ $(document).ready(function () {
 
             //comparing response to boolean values and printing out appropriate responses
             if (retrograde === true) {
-                $("#retrograde").append("Yes");
-                $("#meaning").append("What that means <a href='https://www.mnn.com/lifestyle/arts-culture/stories/what-does-mercury-retrograde-mean'>here!</a>")
+                $("#retrograde").append("Pay Attention! We are currently experiencing the effects of a Mercury Retrograde!");
+                // $("#meaning").append("What that means <a href='https://www.mnn.com/lifestyle/arts-culture/stories/what-does-mercury-retrograde-mean'>here!</a>")
             }
             else {
-                $("#retrograde").append("No");
-                $("#meaning").append("What that means <a href='https://www.refinery29.com/en-us/mercury-retrograde-end-direct-meaning-november-2019'>here!</a>")
+                $("#retrograde").append("Relax! We are not currently experiencing the effects of a Mercury Retrograde.");
+                // $("#meaning").append("What that means <a href='https://www.refinery29.com/en-us/mercury-retrograde-end-direct-meaning-november-2019'>here!</a>")
             };
         });
 

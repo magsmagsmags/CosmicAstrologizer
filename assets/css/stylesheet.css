@@ -7,30 +7,28 @@ a{
 }
 
 a.navbar-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);  /* Overrides bulma default background color of white so when you hover on the logo, you can still see it */
+  background-color: rgba(255, 255, 255, 0.1);  /* Overrides bulma default background color of white so when you hover on the logo, you can still see it */
 }
 
 a.navbar-item:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hero.is-medium .hero-body {
-  padding-bottom: 5rem;
-  padding-top: 5rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .hero h1 {
   font-size: 44px;
 }
 
-.hero .subtitle {
-  line-height: 1.6em;
+.hero h1.title {
+  color: #89789e;
 }
 
-/* STYLING HEADER WITH ZODIAC SIGNS */
-.header {
-  background-color: #f7f9db;
-  padding: 30px 0px 30px 0px;
+.hero .subtitle {
+  line-height: 1.6em;
 }
 
 /* STYLING IMAGE FROM NASA */
@@ -58,65 +56,17 @@ a.navbar-item:focus {
   color: #fff; 
 }
 
-
-/* STYLING FOR THE ZODIAC BUTTONS TITLE */
-
-.zodiac-btn {
-  width: 80px;
-  height: 80px;
-  font-family: 'Ubuntu', sans-serif;
-  color: #333;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 20px;
-  border: 1px solid #999;
-  background-color: white;
-  cursor: pointer;
-  margin: 10px;
-}
-
-.zodiac-btn:hover {
-  background-color: #00d1b2;
-}
-
-.zodiac-btn img {
- margin: 3px;
- width: 50px;
-  padding: 0px;
-  border: 2px solid #fff;
-  border-radius: 25px;
-}
-
-/* STYLING FOR THE GET ASTROLOGIZED TITLE */
-.zodiac-title {
-  text-align: center;
-  font-size: 26px;
-  font-weight:bold;
-  color: #333;
-  font-family: 'Ubuntu', sans-serif;
-  padding-bottom: 10px;
-}
-
-/* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
-.zodiac-sign-name {
-  font-weight: bold;
-  margin: 0 auto;
-}
-
 /* styling tiles */
 .tile.is-child {
-    background-color: rgba(255,255,255, 0.7);
+    background-color: rgba(255,255,255, 0.9);
     height: 600px;
 }
 
-p#retrograde {
-    font-size: 18px;
-    margin-bottom: 5px;
-    display: inline;
-}
-.answerDisplay {
-  display: inline;
-  
+#retrograde {
+  font-size: 20px;
+  background-color: #d5c0ec;
+  padding:15px;
+  /* font-weight: bold; */
 }
 
 
@@ -209,11 +159,28 @@ li.prev {
   text-overflow: ellipsis; */
   
   /* style="width: 10em; height: 1.2em; display:table; overflow-x:auto; text-overflow: ellipsis; white-space: nowrap;" */
+/* 
+.mrBtn {
+  text-align: center;
+  padding:25px;
+} */
+#mrModal {
+  /* margin: 0 auto;  */
+  float:right;
+  background-color: #00d1b2;
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 10px 20px 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: #333 0px 2px 3px;
+}
 
-  
-
-
-
+#mrModal:hover {
+  background-color: #d5c0ec;
+  color: #333;
+}
 
 
 /* STYLING FOR THE ZODIAC BUTTONS */
@@ -226,6 +193,15 @@ li.prev {
   margin-bottom: -0.5rem;  /* Remove the excess margin spacing from the bottoms of the rows created by the bulma columns when stacked */
 }
 
+/* STYLING HEADER WITH ZODIAC SIGNS */
+.header {
+  background-color: #89789e;
+  padding: 20px 0px 20px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* STYLING FOR THE ZODIAC SIGN BUTTONS */
+
 .zodiac-btn {
    width: 80px;  /* Sets the width of the zodiac sign buttons */
    height: 80px;  /* Sets the height of the zodiac sign buttons */
@@ -237,6 +213,7 @@ li.prev {
    border: 1px solid #999;  /* Sets the border styles the zodiac sign buttons */
    background-color: white;  /* Sets the background color of the zodiac sign buttons */
    cursor: pointer;  /* Sets the mouse pointer to change to the hand when hovering over the zodiac sign buttons */
+   margin: 10px;
 }
 
 #searchDate {
@@ -252,12 +229,12 @@ li.prev {
   margin: 0 auto;
 }
 .zodiac-btn:hover {
-   background-color: #00d1b2;  /* Sets the background color of the zodiac buttons when moused over */
+   background-color: #d5c0ec;  /* Sets the background color of the zodiac buttons when moused over */
 }
 
 .zodiac-btn:focus {
   outline: none !important;  /* Removes the browser's default active focus border from the zodiac buttons */
-  background-color: #00d1b2;  /* Sets the background color of the zodiac button that is currently clicked */
+  background-color: #d5c0ec;  /* Sets the background color of the zodiac button that is currently clicked */
 }
 
 .zodiac-btn img {
@@ -271,46 +248,33 @@ li.prev {
 /* STYLING FOR THE GET ASTROLOGIZED TITLE */
 .zodiac-title {
    text-align: center;  /* Sets the text alignment to center for the title words above the zodiac signs that says "Select Your Sign To Get Astrologized!" text */
-   font-size: 24px;  /* Sets the font size of the zodiac signs title text */
+   font-size: 30px;  /* Sets the font size of the zodiac signs title text */
    font-weight: bold;  /* Sets the font weight to bold for the zodiac signs title text */
    color: #333;  /* Sets the font color of the zodiac signs title */
    font-family: 'Ubuntu', sans-serif;  /* Sets the font family of the zodiac signs title */
-   padding-bottom: 25px;  /* Sets the padding below the zodiac signs title so it's not too close to the zodiac sign buttons */
+   padding-bottom: 15px;  /* Sets the padding below the zodiac signs title so it's not too close to the zodiac sign buttons */
    text-transform: uppercase;
 }
+
 
 /* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
 .zodiac-sign-name {  
    font-weight: bold;  /* Sets the font weight to bold for the zodiac sign text labels inside the buttons */
    font-size:10px;  /* Sets the font size of the zodiac signs text labels */
+   margin: 0 auto;
 }
 
 /* STYLING FOR THE ZODIAC INFO CARDS */
 .zodiac-info {
-  padding: 35px;
+  padding-top: 20px;
   color: #333;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
 }
 
-
-
-/* styling tiles */
-.tile.is-child {
-  opacity: 0.7;
-  margin: 50px!important;
-  height: 600px;
-  
-}
-
-p#retrograde {
-  font-size: 18px;
-  /* margin-bottom: 5px; */
-  display: inline;
-}
-.answerDisplay {
-display: inline;
-
+#tile-container {
+padding-top:25px;
+background-image:url("https://wallpaperplay.com/walls/full/1/8/3/364649.jpg");
 }
 
 /* STYLING FOR IFRAME TAG */
@@ -337,7 +301,7 @@ footer{
   width: 100%;
   padding: 15px;
   text-align:center;
-  background-color: #02d1b2;
+  background-color: #89789e;
   font-size: 14px;
  }
  
