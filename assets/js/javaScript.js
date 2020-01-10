@@ -1,5 +1,5 @@
-$(document).ready(function() {
-        //global varibales
+$(document).ready(function () {
+    //global varibales
 
     var spotifyFrameEl = $("#spotifyFrame");
     var spotifyDivEl = $("#spotifyDiv");
@@ -7,13 +7,13 @@ $(document).ready(function() {
 
     var currentDay = moment().format("YYYYMMDD");
     var currentYear = moment().format("YYYY");
- 
+
     console.log(currentDay);
     console.log(currentYear);
     var retrograde;
-    var answerEl = $("#answer");  
-    
-   
+    var answerEl = $("#answer");
+
+
 
     //holding spotify URL path
     var userSign = {
@@ -54,13 +54,13 @@ $(document).ready(function() {
         console.log("DEBUG: THIS WILL SHOW WHEN TAURUS IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
 
-});
-$(".cancer").on("click", function (event) {
-    console.log(spotifyUrl + userSign.cancer);
-    event.preventDefault();
-    console.log("DEBUG: THIS WILL SHOW WHEN CANCER IS CLICKED");
-    console.log("EXAMPLE OF PTAG");
-    cancerMdl.show()
+    });
+    $(".cancer").on("click", function (event) {
+        console.log(spotifyUrl + userSign.cancer);
+        event.preventDefault();
+        console.log("DEBUG: THIS WILL SHOW WHEN CANCER IS CLICKED");
+        console.log("EXAMPLE OF PTAG");
+        cancerMdl.show()
 
         spotifyFrameEl.attr("src", spotifyUrl + userSign.taurus);
         spotifyDivEl.append(spotifyFrameEl);
@@ -177,74 +177,74 @@ $(".cancer").on("click", function (event) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.pisces);
         spotifyDivEl.append(spotifyFrameEl);
 
-        });
+    });
 
     //if-statements for putting current sign on Spotify
 
-    if (moment().subtract(1, "year") + moment().format('1222') <= currentDay && currentDay <= (currentYear + moment().format('0119'))){
+    if (moment().subtract(1, "year") + moment().format('1222') <= currentDay && currentDay <= (currentYear + moment().format('0119'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.capricorn);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
 
-    if (currentYear + moment().format('0119') <= currentDay && currentDay <= (currentYear + moment().format('0218'))){
+    if (currentYear + moment().format('0119') <= currentDay && currentDay <= (currentYear + moment().format('0218'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.aquarius);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('0219') <= currentDay && currentDay <= (currentYear + moment().format('0320'))){
+    if (currentYear + moment().format('0219') <= currentDay && currentDay <= (currentYear + moment().format('0320'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.pisces);
         spotifyDivEl.append(spotifyFrameEl);
-    };  
+    };
 
-    if (currentYear + moment().format('0321') <= currentDay && currentDay <= (currentYear + moment().format('0419'))){
+    if (currentYear + moment().format('0321') <= currentDay && currentDay <= (currentYear + moment().format('0419'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.aries);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('0420') <= currentDay && currentDay <= (currentYear + moment().format('0520'))){
+    if (currentYear + moment().format('0420') <= currentDay && currentDay <= (currentYear + moment().format('0520'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.taurus);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('0521') <= currentDay && currentDay <= (currentYear + moment().format('0620'))){
+    if (currentYear + moment().format('0521') <= currentDay && currentDay <= (currentYear + moment().format('0620'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.gemini);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('0621') <= currentDay && currentDay <= (currentYear + moment().format('0722'))){
+    if (currentYear + moment().format('0621') <= currentDay && currentDay <= (currentYear + moment().format('0722'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.cancer);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('0723') <= currentDay && currentDay <= (currentYear + moment().format('0822'))){
+    if (currentYear + moment().format('0723') <= currentDay && currentDay <= (currentYear + moment().format('0822'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.leo);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('0823') <= currentDay && currentDay <= (currentYear + moment().format('0922'))){
+    if (currentYear + moment().format('0823') <= currentDay && currentDay <= (currentYear + moment().format('0922'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.virgo);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('0923') <= currentDay && currentDay <= (currentYear + moment().format('1022'))){
+    if (currentYear + moment().format('0923') <= currentDay && currentDay <= (currentYear + moment().format('1022'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.libra);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('1023') <= currentDay && currentDay <= (currentYear + moment().format('1121'))){
+    if (currentYear + moment().format('1023') <= currentDay && currentDay <= (currentYear + moment().format('1121'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.scorpio);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-    if (currentYear + moment().format('1122') <= currentDay && currentDay <= (currentYear + moment().format('1221'))){
+    if (currentYear + moment().format('1122') <= currentDay && currentDay <= (currentYear + moment().format('1221'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.sagittarius);
         spotifyDivEl.append(spotifyFrameEl);
     };
 
-      //calling NASA API
+    //calling NASA API
 
-      $.ajax({
+    $.ajax({
         url: "https://api.nasa.gov/planetary/apod?api_key=rYHbWVB1P6xDiWadsZ91DWA5QzfvGnUL881Rgcdn",
         method: "GET"
     })
@@ -264,7 +264,25 @@ $(".cancer").on("click", function (event) {
             astroImg.attr("alt", "Astro Picture of the Day");
             //giving img to background
             $("#imageBackground").append(astroImg);
+
+            // log caption output
+            console.log(response.title);
+            // create caption variable from API (response.explanation)
+            var nasaCaption = response.title;
+            // creating span tag
+            var captionEl = $("<p>");
+            // adding caption to span tag
+            captionEl.text(nasaCaption);
+            captionEl.attr("width", "auto");
+            captionEl.attr("height", "auto");
+            // append image to html text p
+            $("#iotd-caption").append(captionEl);
+
         });
+
+
+
+
 
     //calling Mercury Retrograde API        
     $.ajax({
@@ -295,44 +313,44 @@ $(".cancer").on("click", function (event) {
 
         event.preventDefault();
         answerEl.empty();
-        console.log("Hello");    
-           
+        console.log("Hello");
+
 
         //grabbing user text date and putting it in variable
         var userDate = $("#date-text").val();
 
-       
+
         //logging variable   
         console.log(userDate);
         $.ajax({
             url: "https://mercuryretrogradeapi.com?date=" + userDate,
             method: "GET"
         })
-        .then(function (response) {
-            //logging response
-            console.log(response);
-            retrograde = response.is_retrograde;
+            .then(function (response) {
+                //logging response
+                console.log(response);
+                retrograde = response.is_retrograde;
 
-            if (retrograde === true) {
-                console.log("TRUE");
-                answerEl.append("Mercury will be in retrograde then!");
+                if (retrograde === true) {
+                    console.log("TRUE");
+                    answerEl.append("Mercury will be in retrograde then!");
 
-            }
-            else if(userDate === "") {
-                alert("Please input a valid date");
-                //alerting the user they didn't put in a date
-                
-            }
-            else {
-                console.log("FALSE");
-                answerEl.append("Mercury will not be in retrograde then!");
+                }
+                else if (userDate === "") {
+                    alert("Please input a valid date");
+                    //alerting the user they didn't put in a date
 
-            };
-            
-        });
+                }
+                else {
+                    console.log("FALSE");
+                    answerEl.append("Mercury will not be in retrograde then!");
+
+                };
+
+            });
     });
 
-    
+
 
 });
 

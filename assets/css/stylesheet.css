@@ -46,7 +46,7 @@ a.navbar-item:focus {
 }
 
 #iotd-caption {
-  font-size: 14px;
+  padding-top: 8px !important;
 }
 
 #iotd-source {
