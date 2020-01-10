@@ -18,7 +18,7 @@ $(document).ready(function() {
     //holding spotify URL path
     var userSign = {
 
-        aries: "37i9dQZF1DX2DC3Q7JOmYe",
+        Aries: "37i9dQZF1DX2DC3Q7JOmYe",
         taurus: "37i9dQZF1DXbCgDGG5xQtb",
         gemini: "37i9dQZF1DWWVULl5wUsL9",
         cancer: "37i9dQZF1DXaeX3MJpiD4U",
