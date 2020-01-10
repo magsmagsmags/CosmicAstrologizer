@@ -2,18 +2,60 @@ a{
   color: #00d1b2;    
 }
 
-/* STYLING HEADER WITH ZODIAC SIGNS */
-.header {
-  background-color: #fff;
-  padding: 20px 0px 20px 0px;
+.navbar-item img {
+  max-height: 2rem;
 }
 
-/* STYLING BACKGROUND IMAGE FROM NASA */
-#imageBackground img {
-    position: absolute;
-    z-index: -1;
-    top: 1px;
-    /* height: 600px; */
+a.navbar-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);  /* Overrides bulma default background color of white so when you hover on the logo, you can still see it */
+}
+
+a.navbar-item:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hero.is-medium .hero-body {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+.hero h1 {
+  font-size: 44px;
+}
+
+.hero .subtitle {
+  line-height: 1.6em;
+}
+
+/* STYLING HEADER WITH ZODIAC SIGNS */
+.header {
+  background-color: #f7f9db;
+  padding: 30px 0px 30px 0px;
+}
+
+/* STYLING IMAGE FROM NASA */
+
+#imageBackground {
+  border: 2px solid #666;
+  line-height: 0;
+  position: relative;
+}  
+
+#imageBackground:hover {
+  border: 2px solid #00d1b2;
+}
+
+#iotd-caption {
+  font-size: 14px;
+}
+
+#iotd-source {
+  font-style: italic;
+  font-size: 12px;
+}
+
+#iotd-source a:hover {
+  color: #fff; 
 }
 
 /* STYLING FOOTER */
@@ -37,9 +79,9 @@ footer a:hover {
     color: #efefef;
 }
 
-h1 {
+/* h1 {
     margin-right: 50px;
-}
+} */
 
 /* STYLING SEARCH BAR */
 form.styling input[type=text] {
@@ -69,14 +111,10 @@ form.styling button {
 
 } 
 
-
-
 /* styling tiles */
 .tile.is-child {
-    opacity: 0.7;
-    margin: 50px!important;
+    background-color: rgba(255,255,255, 0.7);
     height: 600px;
-    
 }
 
 p#retrograde {
@@ -189,67 +227,80 @@ li.prev {
 /* STYLING FOR THE ZODIAC BUTTONS */
 
 .column {
-  text-align: center;
+  text-align: center; /* Set the zodiac signs to be centered inside the column containers */
 }
 
 .columns.is-gapless:not(:last-child) {
-  margin-bottom: -0.5rem;
+  margin-bottom: -0.5rem;  /* Remove the excess margin spacing from the bottoms of the rows created by the bulma columns when stacked */
 }
 
 .zodiac-btn {
-   width: 80px;
-   height: 80px;
-   font-family: 'Ubuntu', sans-serif;
-   color: #333;
-   -webkit-border-radius: 30px;
-   -moz-border-radius: 30px;
-   border-radius: 20px;
-   border: 1px solid #999;
-   background-color: white;
-   cursor: pointer;
-   margin: 0 auto;
+   width: 80px;  /* Sets the width of the zodiac sign buttons */
+   height: 80px;  /* Sets the height of the zodiac sign buttons */
+   font-family: 'Ubuntu', sans-serif;  /* Sets the font of the zodiac sign buttons */
+   color: #333;  /* Sets the font color of the zodiac sign buttons */
+   -webkit-border-radius: 30px;  /* Sets the border radius of the zodiac sign buttons in webkit browsers */
+   -moz-border-radius: 30px;  /* Sets the border radius of the zodiac sign buttons in mozilla browsers */
+   border-radius: 20px;  /* Sets the border radius of the zodiac sign buttons in other browsers*/
+   border: 1px solid #999;  /* Sets the border styles the zodiac sign buttons */
+   background-color: white;  /* Sets the background color of the zodiac sign buttons */
+   cursor: pointer;  /* Sets the mouse pointer to change to the hand when hovering over the zodiac sign buttons */
 }
 
 .zodiac-btn:hover {
-   background-color: #00d1b2;
+   background-color: #00d1b2;  /* Sets the background color of the zodiac buttons when moused over */
+}
+
+.zodiac-btn:focus {
+  outline: none !important;  /* Removes the browser's default active focus border from the zodiac buttons */
+  background-color: #00d1b2;  /* Sets the background color of the zodiac button that is currently clicked */
 }
 
 .zodiac-btn img {
-  margin: 3px;
-  width: 50px;
-  padding: 0px;
-  border: 2px solid #fff;
-  border-radius: 25px;
+  margin: 3px;  /* Sets the margin around the outside of the zodiac sign inside the buttons */
+  width: 50px;  /* Sets the width of the zodiac sign images inside the buttons */
+  padding: 0px;  /* Sets the padding on the zodiac sign images inside the buttons */
+  border: 2px solid #fff;  /* Sets the border around the zodiac sign images so that when you mouse over the button and the background changes, there's a white outline around the image to separate the zodiac sign color from the teal background of the button */
+  border-radius: 25px;  /* Sets the border radius around the zodiac sign images to make a perfect circle outline around the zodiac sign images */
 }
 
 /* STYLING FOR THE GET ASTROLOGIZED TITLE */
 .zodiac-title {
-   text-align: center;
-   font-size: 26px;
-   font-weight:bold;
-   color: #333;
-   font-family: 'Ubuntu', sans-serif;
-   padding-bottom: 10px;
+   text-align: center;  /* Sets the text alignment to center for the title words above the zodiac signs that says "Select Your Sign To Get Astrologized!" text */
+   font-size: 24px;  /* Sets the font size of the zodiac signs title text */
+   font-weight: bold;  /* Sets the font weight to bold for the zodiac signs title text */
+   color: #333;  /* Sets the font color of the zodiac signs title */
+   font-family: 'Ubuntu', sans-serif;  /* Sets the font family of the zodiac signs title */
+   padding-bottom: 25px;  /* Sets the padding below the zodiac signs title so it's not too close to the zodiac sign buttons */
+   text-transform: uppercase;
 }
 
 /* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
-.zodiac-sign-name {
-   font-weight: bold;
-   margin: 0 auto;
-   font-size:10px;
+.zodiac-sign-name {  
+   font-weight: bold;  /* Sets the font weight to bold for the zodiac sign text labels inside the buttons */
+   font-size:10px;  /* Sets the font size of the zodiac signs text labels */
+}
+
+/* STYLING FOR THE ZODIAC INFO CARDS */
+.zodiac-info {
+  padding: 35px;
+  color: #333;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 /* STYLING FOR IFRAME TAG */
 
 iframe {
   height: 460px;
+  width: 100%;
   position: relative;
-  animation-name: example;
+  animation-name: easeIn;
   animation-duration: 2s;  
   animation-fill-mode: forwards;
 }
 
-@keyframes example {
+@keyframes easeIn {
   from {top: -15px;}
   to {top: 25px;}
 }

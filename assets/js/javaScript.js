@@ -145,6 +145,19 @@ $(".aries").on("click", function (event) {
     //appending the element to the div holding iframe
     spotifyDivEl.append(spotifyFrameEl);
 
+
+
+
+    // clear the div  /* LUKE TRYING TO ADD ZODIAC INFO TO THE PAGE ON SIGN CLICK */
+
+    // document.getElementById('zodiac-info').innerHTML = '';
+
+    // replace it
+
+    // var h1 = document.createElement('h1');
+    // h1.innerHTML = "Paragraph changed to Aries!";
+    // document.getElementById('zodiac-info').appendChild(h1);
+
 });
 
 $(".taurus").on("click", function (event) {
@@ -156,6 +169,16 @@ $(".taurus").on("click", function (event) {
 
     spotifyFrameEl.attr("src", spotifyUrl + userSign.taurus);
     spotifyDivEl.append(spotifyFrameEl);
+
+    // clear the div   /* LUKE TRYING TO ADD ZODIAC INFO TO THE PAGE ON SIGN CLICK */
+
+    // document.getElementById('zodiac-info').innerHTML = '';
+
+    // replace it
+
+    // var h1 = document.createElement('h1');
+    // h1.innerHTML = "Paragraph changed to Taurus!";
+    // document.getElementById('zodiac-info').appendChild(h1);
 
 });
 $(".gemini").on("click", function (event) {
@@ -175,6 +198,7 @@ $(".cancer").on("click", function (event) {
     event.preventDefault();
     console.log("DEBUG: THIS WILL SHOW WHEN CANCER IS CLICKED");
     console.log("EXAMPLE OF PTAG");
+    cancerMdl.show()
 
 
 
@@ -297,5 +321,11 @@ $(".next").on("click", function (event) {
     console.log("World");
 
 });
+
+
+
+
+
+
 
 
