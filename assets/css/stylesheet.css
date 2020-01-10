@@ -216,6 +216,18 @@ li.prev {
    margin: 10px;
 }
 
+#searchDate {
+  
+  font-family: 'Ubuntu', sans-serif;
+  color: #333;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background-color: white;
+  cursor: pointer;
+  margin: 0 auto;
+}
 .zodiac-btn:hover {
    background-color: #d5c0ec;  /* Sets the background color of the zodiac buttons when moused over */
 }
@@ -274,11 +286,12 @@ iframe {
   animation-name: easeIn;
   animation-duration: 2s;  
   animation-fill-mode: forwards;
+  /* opacity: 0%; */
 }
 
 @keyframes easeIn {
   from {top: -15px;}
-  to {top: 25px;}
+  to {top: 0px;}
 }
 
 /* STYLING FOOTER */
