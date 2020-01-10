@@ -10,46 +10,46 @@ $(document).ready(function () {
     var answerEl = $("#answer");
     monthEl = $("#month");
     yearEl = $("#year");
-    
+
 
     $(monthEl).text(monthDisplay)
     $(yearEl).append(yearDisplay);
 
-    console.log(monthEl.val());   
-     
-   
-    
-   
-   
-   
+    console.log(monthEl.val());
+
+
+
+
+
+
     //calendar click functions
 
 
-    $(".calendarNum").on("click", function() {
+    $(".calendarNum").on("click", function () {
         userNum = $(this).val();
         console.log(userNum);
-    
+
 
 
     });
     //event listener for the div to get the moment month and year?
 
 
-    $(".prev").on("click", function(event) {
+    $(".prev").on("click", function (event) {
         event.preventDefault();
         console.log("Hello");
         monthDisplay = moment().format(1, 'MMMM');
         console.log(monthDisplay);
         $(monthEl).append(monthDisplay);
 
-        
+
     });
-    $(".next").on("click", function(event) {
+    $(".next").on("click", function (event) {
         event.preventDefault();
         console.log("World");
-        
-    });  
-   
+
+    });
+
     //calling NASA API
 
     $.ajax({
@@ -87,12 +87,12 @@ $(document).ready(function () {
 
             //comparing response to boolean values and printing out appropriate responses
             if (retrograde === true) {
-                $("#retrograde").append("Yes");
-                $("#meaning").append("What that means <a href='https://www.mnn.com/lifestyle/arts-culture/stories/what-does-mercury-retrograde-mean'>here!</a>")
+                $("#retrograde").append("Pay Attention! We are currently experiencing the effects of a Mercury Retrograde!");
+                // $("#meaning").append("What that means <a href='https://www.mnn.com/lifestyle/arts-culture/stories/what-does-mercury-retrograde-mean'>here!</a>")
             }
             else {
-                $("#retrograde").append("No");
-                $("#meaning").append("What that means <a href='https://www.refinery29.com/en-us/mercury-retrograde-end-direct-meaning-november-2019'>here!</a>")
+                $("#retrograde").append("Relax! We are not currently experiencing the effects of a Mercury Retrograde.");
+                // $("#meaning").append("What that means <a href='https://www.refinery29.com/en-us/mercury-retrograde-end-direct-meaning-november-2019'>here!</a>")
             };
         });
 
@@ -103,8 +103,8 @@ $(document).ready(function () {
 
         event.preventDefault();
         answerEl.empty();
-        console.log("Hello");    
-           
+        console.log("Hello");
+
 
         //grabbing user text date and putting it in variable
         var userDate = $("#date-text").val();
@@ -114,21 +114,21 @@ $(document).ready(function () {
             url: "https://mercuryretrogradeapi.com?date=" + userDate,
             method: "GET"
         })
-        .then(function (response) {
-            //logging response
-            console.log(response);
-            retrograde = response.is_retrograde;
+            .then(function (response) {
+                //logging response
+                console.log(response);
+                retrograde = response.is_retrograde;
 
-            if (retrograde === true) {
-                console.log("TRUE");
-                answerEl.append("Mercury will be in retrograde then!");
+                if (retrograde === true) {
+                    console.log("TRUE");
+                    answerEl.append("Mercury will be in retrograde then!");
 
-            }
-            else {
-                console.log("FALSE");
-                answerEl.append("Mercury will not be in retrograde then!");
+                }
+                else {
+                    console.log("FALSE");
+                    answerEl.append("Mercury will not be in retrograde then!");
 
-            }
-        });
+                }
+            });
     });
 });
