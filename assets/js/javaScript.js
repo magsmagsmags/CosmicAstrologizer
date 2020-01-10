@@ -54,6 +54,13 @@ $(document).ready(function() {
         console.log("DEBUG: THIS WILL SHOW WHEN TAURUS IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
 
+});
+$(".cancer").on("click", function (event) {
+    console.log(spotifyUrl + userSign.cancer);
+    event.preventDefault();
+    console.log("DEBUG: THIS WILL SHOW WHEN CANCER IS CLICKED");
+    console.log("EXAMPLE OF PTAG");
+    cancerMdl.show()
 
         spotifyFrameEl.attr("src", spotifyUrl + userSign.taurus);
         spotifyDivEl.append(spotifyFrameEl);
@@ -328,6 +335,12 @@ $(document).ready(function() {
     
 
 });
+
+
+
+
+
+
 
 
 
