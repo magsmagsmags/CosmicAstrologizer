@@ -59,16 +59,16 @@ $(document).ready(function () {
 
         .then(function (response) {
             //logging what the output is
-            console.log(response.url);
+            // console.log(response.url);
             //creating the image Url
             var imageUrl = response.url;
             //creating img tag
             var astroImg = $("<img>");
             //adding the img to the img tag
             astroImg.attr("src", imageUrl);
-            astroImg.attr("width", "100%")
+            // astroImg.attr("width", "100%")
             // astroImg.attr("height", "700px")
-            astroImg.attr("z-index", "-1");
+            // astroImg.attr("z-index", "-1");
             astroImg.attr("alt", "Astro Picture of the Day");
             //giving img to background
             $("#imageBackground").append(astroImg);
