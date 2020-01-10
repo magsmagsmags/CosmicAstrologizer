@@ -239,6 +239,18 @@ li.prev {
    cursor: pointer;  /* Sets the mouse pointer to change to the hand when hovering over the zodiac sign buttons */
 }
 
+#searchDate {
+  
+  font-family: 'Ubuntu', sans-serif;
+  color: #333;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background-color: white;
+  cursor: pointer;
+  margin: 0 auto;
+}
 .zodiac-btn:hover {
    background-color: #00d1b2;  /* Sets the background color of the zodiac buttons when moused over */
 }
@@ -281,6 +293,26 @@ li.prev {
   text-align: center;
 }
 
+
+
+/* styling tiles */
+.tile.is-child {
+  opacity: 0.7;
+  margin: 50px!important;
+  height: 600px;
+  
+}
+
+p#retrograde {
+  font-size: 18px;
+  /* margin-bottom: 5px; */
+  display: inline;
+}
+.answerDisplay {
+display: inline;
+
+}
+
 /* STYLING FOR IFRAME TAG */
 
 iframe {
@@ -290,11 +322,12 @@ iframe {
   animation-name: easeIn;
   animation-duration: 2s;  
   animation-fill-mode: forwards;
+  /* opacity: 0%; */
 }
 
 @keyframes easeIn {
   from {top: -15px;}
-  to {top: 25px;}
+  to {top: 0px;}
 }
 
 /* STYLING FOOTER */
