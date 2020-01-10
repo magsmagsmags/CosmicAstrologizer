@@ -293,7 +293,8 @@ $(".pisces").on("click", function (event) {
     spotifyFrameEl.attr("src", spotifyUrl + userSign.pisces);
     spotifyDivEl.append(spotifyFrameEl);
 
-});
+    });
+
 
 //calendar click functions
 

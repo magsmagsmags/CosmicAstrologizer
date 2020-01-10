@@ -1,11 +1,55 @@
+
+//figure out how to update the calendar, add an input for users to pick a date. Highlight that date. put my no next to my title to add space, or lengthen the tiles? 
 $(document).ready(function () {
     //global variables
     var currentDay = moment().format("YYYYMMDD");
+    var monthDisplay = moment().format('MMMM')
+    var yearDisplay = moment().format("YYYY")
     console.log(currentDay);
     var retrograde;
     var answerEl = $("#answer");
-    $("#month").append(moment().format("MMMM"))
-    $("#year").append(moment().format("YYYY"));
+    monthEl = $("#month");
+    yearEl = $("#year");
+    
+
+    $(monthEl).text(monthDisplay)
+    $(yearEl).append(yearDisplay);
+
+    console.log(monthEl.val());   
+     
+   
+    
+   
+   
+   
+    //calendar click functions
+
+
+    $(".calendarNum").on("click", function() {
+        userNum = $(this).val();
+        console.log(userNum);
+    
+
+
+    });
+    //event listener for the div to get the moment month and year?
+
+
+    $(".prev").on("click", function(event) {
+        event.preventDefault();
+        console.log("Hello");
+        monthDisplay = moment().format(1, 'MMMM');
+        console.log(monthDisplay);
+        $(monthEl).append(monthDisplay);
+
+        
+    });
+    $(".next").on("click", function(event) {
+        event.preventDefault();
+        console.log("World");
+        
+    });  
+   
     //calling NASA API
 
     $.ajax({
@@ -54,12 +98,13 @@ $(document).ready(function () {
 
 
     //creating onClick event for Date search in MR Tile  
-    $("#date-form").on("submit", function (event) {
+    $("#searchDate").on("click", function (event) {
 
 
         event.preventDefault();
         answerEl.empty();
-        console.log("Hello");
+        console.log("Hello");    
+           
 
         //grabbing user text date and putting it in variable
         var userDate = $("#date-text").val();
@@ -69,31 +114,21 @@ $(document).ready(function () {
             url: "https://mercuryretrogradeapi.com?date=" + userDate,
             method: "GET"
         })
-            .then(function (response) {
-                //logging response
-                console.log(response);
-                retrograde = response.is_retrograde;
+        .then(function (response) {
+            //logging response
+            console.log(response);
+            retrograde = response.is_retrograde;
 
-                if (retrograde === true) {
-                    console.log("TRUE");
-                    answerEl.append("Mercury will be in retrograde then!");
+            if (retrograde === true) {
+                console.log("TRUE");
+                answerEl.append("Mercury will be in retrograde then!");
 
-                }
-                else {
-                    console.log("FALSE");
-                    answerEl.append("Mercury will not be in retrograde then!");
+            }
+            else {
+                console.log("FALSE");
+                answerEl.append("Mercury will not be in retrograde then!");
 
-                }
-            });
-    })
-
-
-
-
+            }
+        });
+    });
 });
-
-
-
-
-
-

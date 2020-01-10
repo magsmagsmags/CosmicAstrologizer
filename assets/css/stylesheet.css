@@ -58,58 +58,50 @@ a.navbar-item:focus {
   color: #fff; 
 }
 
-/* STYLING FOOTER */
-footer{
- position: fixed;
- bottom: 0px;
- width: 100%;
- padding: 15px;
- text-align:center;
- background-color: #02d1b2;
- font-size: 14px;
-}
 
-footer a {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-style: italic;
-}
+/* STYLING FOR THE ZODIAC BUTTONS TITLE */
 
-footer a:hover {
-    color: #efefef;
-}
-
-/* h1 {
-    margin-right: 50px;
-} */
-
-/* STYLING SEARCH BAR */
-form.styling input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  height: 30px;
-  width: 80%;
-  background: #f1f1f1;
-  margin: 15px 0;
-     
-}
-
-form.styling button {
-  border-radius: 5px;
-  margin: 14px 0;
-  /* bottom: 3px; */
-  width: 20%;
-  padding: 7px;
-  background: #2196F3;
-  color: white;
-  /* font-size: 17px; */
-  border: 1px solid grey;
-  border-left: none;
+.zodiac-btn {
+  width: 80px;
+  height: 80px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #333;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background-color: white;
   cursor: pointer;
+  margin: 10px;
+}
 
-} 
+.zodiac-btn:hover {
+  background-color: #00d1b2;
+}
+
+.zodiac-btn img {
+ margin: 3px;
+ width: 50px;
+  padding: 0px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+}
+
+/* STYLING FOR THE GET ASTROLOGIZED TITLE */
+.zodiac-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight:bold;
+  color: #333;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 10px;
+}
+
+/* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
+.zodiac-sign-name {
+  font-weight: bold;
+  margin: 0 auto;
+}
 
 /* styling tiles */
 .tile.is-child {
@@ -304,6 +296,31 @@ iframe {
   from {top: -15px;}
   to {top: 25px;}
 }
+
+/* STYLING FOOTER */
+footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 15px;
+  text-align:center;
+  background-color: #02d1b2;
+  font-size: 14px;
+ }
+ 
+ footer a {
+     color: rgb(0, 0, 0);
+     font-weight: bold;
+     font-style: italic;
+ }
+ 
+ footer a:hover {
+     color: #efefef;
+ }
+ 
+ h1 {
+     margin-right: 50px;
+ }
 
 
 /* Add media queries for smaller screens */
