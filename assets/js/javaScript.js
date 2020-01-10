@@ -264,7 +264,25 @@ $(document).ready(function () {
             astroImg.attr("alt", "Astro Picture of the Day");
             //giving img to background
             $("#imageBackground").append(astroImg);
+
+            // log caption output
+            console.log(response.title);
+            // create caption variable from API (response.explanation)
+            var nasaCaption = response.title;
+            // creating span tag
+            var captionEl = $("<p>");
+            // adding caption to span tag
+            captionEl.text(nasaCaption);
+            captionEl.attr("width", "auto");
+            captionEl.attr("height", "auto");
+            // append image to html text p
+            $("#iotd-caption").append(captionEl);
+
         });
+
+
+
+
 
     //calling Mercury Retrograde API        
     $.ajax({
