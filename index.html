@@ -373,8 +373,13 @@
                             </div>
                             <!-- END MERCURY RETROGRADE MODAL -->
 
+
+
                         </article>
                         <article class="tile is-child box">
+                            <!-- Put any content you want -->
+                            <p class="title is-5">Check your dates!</p>
+
                             <!--DATE SEARCH-->
                             <form id="date-form" type="date" class="text">
 
@@ -382,12 +387,14 @@
                                 <button id="searchDate">Search a date</button>
                             </form>
                             <br>
-                            <p id="answer"></p>
+                            <p class="subtitle" id="answer"></p>
+
+
                         </article>
                     </div>
                     <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <p class="title is-5">Your Sign's Spotify Playlist</p>
+                        <article class="tile is-child box is-vertical">
+                            <p class="title is-5" id="spotifyListName"></p>
                             <p class="subtitle"></p>
                             <div id="spotifyDiv">
                                 <iframe id="spotifyFrame" title="Spotify Playlist by Sign" width="95%" height="200">
@@ -398,10 +405,42 @@
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child box">
-                        Zodiac Info goes here </article>
+
+                        <!-- <i class="fas fa-sitemap" style="font-size: 62px;"></i> -->
+
+                        <div class="content">
+                            <p class="title is-3"><i class="fab fa-quinscape"></i> <strong> General Astrology
+                                    Information</strong></p>
+                            <!-- <p class="zodiac-info">
+                                There are 12 zodiac signs, and each sign has its own strengths and weaknesses, its
+                                own specific traits, desires and attitude towards life and people.
+                            </p> -->
+
+                            <p class="zodiacName"></p>
+                            <p class="zodiacTraits"></p>
+                            <p class="zodiacSymbol"></p>
+                            <p class="zodiacVibe"></p>
+                            <p class="zodiacMental"></p>
+
+
+                        </div>
+
+                        <div class="content">
+                            <!-- <p class="zodiac-info">
+                                By analyzing the projection of the position of planets, and the Sun
+                                and the Moon on the Ecliptic at the moment of birth, Astrology can give us a glimpse
+                                of a person's basic characteristics, preferences,
+                                flaws and fears.
+                           </p>  -->
+
+
+                        </div>
+                    </article>
+
                 </div>
             </div>
-            <div class="tile is-parent">
+            <div class="tile is-parent is-vertical">
+
                 <article class="tile is-child box">
                     <p class="title is-5">Your Sign's Ruling Planet</p>
                     <p class="subtitle">In astrology, each zodiac sign has a ruling planet. The following shows the
@@ -494,34 +533,18 @@
                             </tbody>
                         </table>
                     </div>
-
                 </article>
             </div>
         </div>
     </section>
 
+    <div class="tile is-parent">
+        <article class="tile is-child box" style="padding: 25px;">
 
-    <!-- <div class="tile is-parent">
-        <article class="tile is-child box">
-
-            <div class="content">
-                <p class="subtitle"><i class="fab fa-quinscape"></i> <strong> General Astrology
-                        Information</strong></p>
-                <p class="zodiac-info">
-                    There are 12 zodiac signs, and each sign has its own strengths and weaknesses, its
-                    own specific traits, desires and attitude towards life and people.
-                </p>
-            </div>
-
-            <div class="content">
-                <p class="zodiac-info">
-                    By analyzing the projection of the position of planets, and the Sun
-                    and the Moon on the Ecliptic at the moment of birth, Astrology can give us a glimpse
-                    of a person's basic characteristics, preferences,
-                    flaws and fears.
-                </p>
-            </div>
-        </article> -->
+        </article>
+    </div>
+    </div>
+    </div>
 
 
 
