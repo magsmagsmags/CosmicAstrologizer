@@ -19,7 +19,10 @@ $(document).ready(function () {
     var zodiacSymbolEl = $(".zodiacSymbol");
     var zodiacVibeEl = $(".zodiacVibe");
     var zodiacMentalEl = $(".zodiacMental");
-
+    var zodiacDatesEl = $(".zodiacDates");
+    var zodiacGraphicEl = $(".zodiacGraphic");
+    var zodiacSignEl = $(".zodiacSign");
+    var rulingPlanetEl = $(".rulingPlanet");
 
 
     //holding spotify URL path
@@ -59,6 +62,8 @@ $(document).ready(function () {
 
         //calling function and passing the sign name and the appropriate index number that shows in the API documentation as arguments.
         displayZodiacInfo("Aries", 0);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/aries-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/aries.png")
 
     });
 
@@ -75,6 +80,8 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Taurus", 1);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/taurus-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/taurus.png")
 
     });
 
@@ -92,6 +99,8 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Gemini", 2);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/gemini-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/gemini.png")
 
 
     });
@@ -107,6 +116,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Cancer", 3);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/cancer-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/cancer.png")
+
 
     });
     $(".leo").on("click", function (event) {
@@ -121,6 +133,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Leo", 4);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/leo-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/leo.png")
+
 
     });
     $(".virgo").on("click", function (event) {
@@ -135,6 +150,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Virgo", 5);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/virgo-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/virgo.png")
+
 
     });
     $(".libra").on("click", function (event) {
@@ -150,6 +168,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Libra", 6);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/libra-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/libra.png")
+
 
 
     });
@@ -166,6 +187,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Scorpio", 7);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/scorpio-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/scorpio.png")
+
 
 
     });
@@ -181,6 +205,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Sagittarius", 8);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/sagittarius-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/sagittarius.png")
+
 
 
     });
@@ -197,6 +224,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Capricorn", 9);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/capricorn-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/capricorn.png")
+
 
 
     });
@@ -213,6 +243,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Aquarius", 10);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/aquarius-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/aquarius.png")
+
 
 
     });
@@ -229,6 +262,9 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
 
         displayZodiacInfo("Pisces", 11);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/pisces-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/pisces.png")
+
 
     });
 
@@ -239,6 +275,8 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
         $("#spotifyListName").text("Capricorn Spotify PlayList");
         displayZodiacInfo("Capricorn", 9);
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/capricorn-graphic.jpg")
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/capricorn.png")
 
 
     };
@@ -364,6 +402,12 @@ $(document).ready(function () {
                 }
                 //INPUTTING TEXT INTO MY P TAGS IN INDEX FROM MY API CALL
                 zodiacNameEl.text(x);
+                zodiacTraitsEl.text("Good Traits: " + response[y].good_traits);
+                zodiacSymbolEl.text("Symbol: " + response[y].symbol);
+                zodiacVibeEl.text("Vibe: " + response[y].vibe);
+                zodiacMentalEl.text("Mental Traits: " + response[y].mental_traits);
+                zodiacDatesEl.text("Sign Dates:" + response[y].sun_dates);
+                rulingPlanetEl.text("Ruling Planet:" + response[y].ruling_planet);
                 zodiacTraitsEl.text(" " + response[y].good_traits);
                 zodiacSymbolEl.text(" " + response[y].symbol);
                 zodiacVibeEl.text(" " + response[y].vibe);
@@ -495,9 +539,72 @@ $(document).ready(function () {
 
 
 
+/* MODAL FUNCTIONALITY SCRIPTS */
+class BulmaModal {
+    constructor(selector) {
+        this.elem = document.querySelector(selector)
+        this.close_data()
+    }
+
+    show() {
+        this.elem.classList.toggle('is-active')
+        this.on_show()
+    }
+
+    close() {
+        this.elem.classList.toggle('is-active')
+        this.on_close()
+    }
+
+    close_data() {
+        var modalClose = this.elem.querySelectorAll("[data-bulma-modal='close'], .modal-background")
+        var that = this
+        modalClose.forEach(function (e) {
+            e.addEventListener("click", function () {
+
+                that.elem.classList.toggle('is-active')
+
+                var event = new Event('modal:close')
+
+                that.elem.dispatchEvent(event);
+            })
+        })
+    }
+
+    on_show() {
+        var event = new Event('modal:show')
+
+        this.elem.dispatchEvent(event);
+    }
+
+    on_close() {
+        var event = new Event('modal:close')
+
+        this.elem.dispatchEvent(event);
+    }
+
+    addEventListener(event, callback) {
+        this.elem.addEventListener(event, callback)
+    }
+}
 
 
+/* START MODAL SCRIPTS */
+var mrBtn = document.querySelector("#modalBtn")
+var mrMdl = new BulmaModal("#mrModal")
 
+mrBtn.addEventListener("click", function () {
+    mrMdl.show()
+})
+
+mrMdl.addEventListener('modal:show', function () {
+    console.log("opened")
+})
+
+mrMdl.addEventListener("modal:close", function () {
+    console.log("closed")
+})
+/* END ARIES MODAL SCRIPTS */
 
 
 
