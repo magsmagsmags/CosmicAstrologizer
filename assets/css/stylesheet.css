@@ -59,111 +59,22 @@ a.navbar-item:focus {
 /* styling tiles */
 .tile.is-child {
     background-color: rgba(255,255,255, 0.9);
-    height: 600px;
+   /* taking height off to make spotify div equal out */
 }
-
-#retrograde {
+#answer {
   font-size: 20px;
   background-color: #d5c0ec;
   padding:15px;
+  text-align: center;
+}
+#retrograde {
+  font-size: 20px;
+  background-color: #d5c0ec;
+  padding:25px;
+  
   /* font-weight: bold; */
 }
-
-
-/* Calendar for Retrograde */
-
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-.month {
-  
-  width: 100%;
-  background: #1abc9c;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.month ul {
-  margin: 0;
-  padding: 0;
-}
-
-.month ul li {
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-
-}
-
-.month .prev {
-  float: left;
-  padding-top: 10px;
-}
-
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
-
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
-.days:hover {
-  cursor: pointer;
-}
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
-}
-
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
-}
-
-li.next {
-  margin-right: 10px;
-}
-li.prev {
-  margin-left: 10px;
-}
-.next:hover {
-  cursor: pointer;
-}
-.prev:hover {
-  cursor: pointer;
-}
-
-
-/* MOTHER PLANET INFO */
-
-/* #planetTable {
-
-  box-sizing: border-box;
-  display: table;
-  position: relative;
-  font-size: 12px;
-  /* width: 50px;
-  height: 50px; */
-  /* overflow: auto;
-  text-overflow: ellipsis; */
-  
-  /* style="width: 10em; height: 1.2em; display:table; overflow-x:auto; text-overflow: ellipsis; white-space: nowrap;" */
-/* 
-.mrBtn {
-  text-align: center;
-  padding:25px;
-} */
+/*took out calendar css bc there is none */
 #mrModal {
   /* margin: 0 auto;  */
   float:right;
@@ -280,18 +191,18 @@ background-image:url("https://wallpaperplay.com/walls/full/1/8/3/364649.jpg");
 /* STYLING FOR IFRAME TAG */
 
 iframe {
-  height: 460px;
+  height: 650px;
   width: 100%;
   position: relative;
   animation-name: easeIn;
-  animation-duration: 2s;  
+  animation-duration: 3s;  
   animation-fill-mode: forwards;
   /* opacity: 0%; */
 }
 
 @keyframes easeIn {
-  from {top: -15px;}
-  to {top: 0px;}
+  from {top: -25px;}
+  to {top: 5px;}
 }
 
 /* STYLING FOOTER */
@@ -319,20 +230,6 @@ footer{
      margin-right: 50px;
  }
 
-
-/* Add media queries for smaller screens */
-/* @media screen and (max-width:720px) {
-  .weekdays li, .days li {width: 13.1%;}
-}
-
-@media screen and (max-width: 420px) {
-  .weekdays li, .days li {width: 12.5%;}
-  .days li .active {padding: 2px;}
-}
-
-@media screen and (max-width: 290px) {
-  .weekdays li, .days li {width: 12.2%;}
-} */
 
 
 /*  SCREEN SIZE MEDIA QUERIES TO CHANGE THE LAYOUT OF THE ZODIAC BUTTONS */
