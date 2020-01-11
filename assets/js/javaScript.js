@@ -408,6 +408,14 @@ $(document).ready(function () {
                 zodiacMentalEl.text("Mental Traits: " + response[y].mental_traits);
                 zodiacDatesEl.text("Sign Dates:" + response[y].sun_dates);
                 rulingPlanetEl.text("Ruling Planet:" + response[y].ruling_planet);
+                zodiacTraitsEl.text(" " + response[y].good_traits);
+                zodiacSymbolEl.text(" " + response[y].symbol);
+                zodiacVibeEl.text(" " + response[y].vibe);
+                zodiacMentalEl.text(" " + response[y].mental_traits);
+
+
+
+
             });
 
 
