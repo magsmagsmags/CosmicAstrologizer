@@ -159,14 +159,15 @@ li.prev {
   text-overflow: ellipsis; */
   
   /* style="width: 10em; height: 1.2em; display:table; overflow-x:auto; text-overflow: ellipsis; white-space: nowrap;" */
-/* 
+
 .mrBtn {
   text-align: center;
   padding:25px;
-} */
-#mrModal {
+} 
+
+#modalBtn {
   /* margin: 0 auto;  */
-  float:right;
+  margin:0 auto;
   background-color: #00d1b2;
   border: 1px solid #666;
   border-radius: 8px;
@@ -177,7 +178,7 @@ li.prev {
   box-shadow: #333 0px 2px 3px;
 }
 
-#mrModal:hover {
+#modalBtn:hover {
   background-color: #d5c0ec;
   color: #333;
 }
