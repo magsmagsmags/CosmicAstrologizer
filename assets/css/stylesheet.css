@@ -159,14 +159,44 @@ a.navbar-item:focus {
 /* STYLING FOR THE GET ASTROLOGIZED TITLE */
 .zodiac-title {
    text-align: center;  /* Sets the text alignment to center for the title words above the zodiac signs that says "Select Your Sign To Get Astrologized!" text */
-   font-size: 30px;  /* Sets the font size of the zodiac signs title text */
+   font-size: 35px;  /* Sets the font size of the zodiac signs title text */
    font-weight: bold;  /* Sets the font weight to bold for the zodiac signs title text */
    color: #333;  /* Sets the font color of the zodiac signs title */
    font-family: 'Ubuntu', sans-serif;  /* Sets the font family of the zodiac signs title */
-   padding-bottom: 15px;  /* Sets the padding below the zodiac signs title so it's not too close to the zodiac sign buttons */
+   padding-bottom: 0px; /* Sets the padding below the zodiac signs title so it's not too close to the zodiac sign buttons */
    text-transform: uppercase;
 }
 
+#zodiac-subtitle {  /* ZODIAC SUBTITLE */ 
+  text-align: center ! important;  /* Sets the text alignment to center for the subtitle words above the zodiac signs that says "Select Your Sign To Get Astrologized!" text */
+  font-size: 20px;  /* Sets the font size of the zodiac signs subtitle text */
+  font-weight: bold;  /* Sets the font weight to bold for the zodiac signs subtitle text */
+  color: #333;  /* Sets the font color of the zodiac signs subtitle */
+  font-family: 'Ubuntu', sans-serif;  /* Sets the font family of the zodiac signs subtitle */
+  padding-top: 0px; 
+  padding-bottom: 30px;  
+  text-transform: uppercase; 
+}
+
+.zodiac-subtitle2 {
+  text-align: center ! important; 
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  font-style: italic;
+  /* padding-bottom: 30px !important;  */
+  padding-top: 15px !important;  
+  color: rgb(20, 20, 20);
+}
+
+.signDate {
+  font-size: 12px;  /* Sets the font size of the zodiac signs title text */
+  font-weight: bold;  /* Sets the font weight to bold for the zodiac signs title text */
+  color: #333;  /* Sets the font color of the zodiac signs title */
+  font-family: 'Ubuntu', sans-serif;  /* Sets the font family of the zodiac signs title */
+  padding-top: 0px;  /* Sets the padding above the zodiac signs title so it's not too close to the zodiac sign buttons */
+
+}
 
 /* STYLING FOR THE ZODIAC SIGN NAMES BELOW THE IMAGES */
 .zodiac-sign-name {  
@@ -187,6 +217,30 @@ a.navbar-item:focus {
 padding-top:25px;
 background-image:url("https://wallpaperplay.com/walls/full/1/8/3/364649.jpg");
 }
+
+/* STYLING THE ZODIAC CAD SUBTITLES */
+
+.zodiacTraitsTitle {
+  font-weight: bold; 
+  color: #89789e;
+  text-transform: uppercase;
+}
+.zodiacSymbolTitle {
+  font-weight: bold; 
+  color: #89789e;
+  text-transform: uppercase;
+}
+.zodiacVibeTitle {
+  font-weight: bold;
+  color: #89789e;
+  text-transform: uppercase;
+}
+.zodiacMentalTitle {
+  font-weight: bold;
+  color: #89789e;
+  text-transform: uppercase;
+}
+
 
 /* STYLING FOR IFRAME TAG */
 

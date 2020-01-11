@@ -56,11 +56,11 @@ $(document).ready(function () {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.aries);
         //appending the element to the div holding iframe
         spotifyDivEl.append(spotifyFrameEl);
-       
+
         //calling function and passing the sign name and the appropriate index number that shows in the API documentation as arguments.
         displayZodiacInfo("Aries", 0);
 
-    }); 
+    });
 
 
     $(".taurus").on("click", function (event) {
@@ -77,7 +77,7 @@ $(document).ready(function () {
         displayZodiacInfo("Taurus", 1);
 
     });
-    
+
     $(".gemini").on("click", function (event) {
         console.log(spotifyUrl + userSign.gemini);
         event.preventDefault();
@@ -285,7 +285,7 @@ $(document).ready(function () {
         spotifyDivEl.append(spotifyFrameEl);
         $("#spotifyListName").text("Gemini Spotify PlayList");
         displayZodiacInfo("Gemini", 2);
-        
+
     };
 
     if (currentYear + moment().format('0621') <= currentDay && currentDay <= (currentYear + moment().format('0722'))) {
@@ -321,7 +321,7 @@ $(document).ready(function () {
         $("#spotifyListName").text("Libra Spotify PlayList");
         displayZodiacInfo("Libra", 6);
 
-        
+
     };
 
     if (currentYear + moment().format('1023') <= currentDay && currentDay <= (currentYear + moment().format('1121'))) {
@@ -341,13 +341,13 @@ $(document).ready(function () {
 
 
     };
-    
-    
+
+
     //AJAX to zodiacal to show traits about your sign;
 
     //creating function. Passing x and y as arguments
     function displayZodiacInfo(x, y) {
-    //calling api function
+        //calling api function
         $.ajax({
             url: "https://cors-ut-bootcamp.herokuapp.com/https://zodiacal.herokuapp.com/api",
             method: "GET"
@@ -356,7 +356,7 @@ $(document).ready(function () {
                 console.log(response);
                 //making sure the btn click matches to the api call
                 console.log(response[y].name);
-                if(x === response[y].name) {
+                if (x === response[y].name) {
 
                     console.log("DEBUG: TRUE");
                 } else {
@@ -364,14 +364,16 @@ $(document).ready(function () {
                 }
                 //INPUTTING TEXT INTO MY P TAGS IN INDEX FROM MY API CALL
                 zodiacNameEl.text(x);
-                zodiacTraitsEl.text("Good Traits: " + response[y].good_traits);
-                zodiacSymbolEl.text("Symbol: " + response[y].symbol);
-                zodiacVibeEl.text("Vibe: " + response[y].vibe);
-                zodiacMentalEl.text("Mental Traits: " + response[y].mental_traits);
+                zodiacTraitsEl.text(" " + response[y].good_traits);
+                zodiacSymbolEl.text(" " + response[y].symbol);
+                zodiacVibeEl.text(" " + response[y].vibe);
+                zodiacMentalEl.text(" " + response[y].mental_traits);
+
+
 
 
             });
-    
+
 
     };
 
