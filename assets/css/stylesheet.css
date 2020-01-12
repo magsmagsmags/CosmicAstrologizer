@@ -1,14 +1,21 @@
 body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
+  line-height: 1.5em;
+}
+
+.zodiacElementImg {
+  width: 120px;
+  border: 1px solid #999;
+  border-radius: 25px;
+  margin-top: 5px;
 }
 
 .zodiacGraphic {
-  float: right;
-  width: 250px;
+  width: 225px;
   border: 1px solid #333;
-  border-radius: 15px;
-  margin: 15px;
+  border-radius: 35px;
+  margin: 0 auto;
 }
 
 .zodiacSign {
@@ -18,7 +25,13 @@ body {
   border-radius: 20px;
   margin-right: 10px;
 }
-a{
+
+
+button {
+  font-weight: bold;
+}
+
+a {
   color: #00d1b2;    
 }
 
@@ -35,20 +48,23 @@ a.navbar-item:focus {
 }
 
 .hero.is-medium .hero-body {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
 }
 
 .hero h1 {
   font-size: 44px;
+  text-shadow: rgba(0, 0, 0, 0.8) 4px 3px 5px;
 }
 
-.hero h1.title {
-  color: #89789e;
+.hero.is-dark .title{
+  color: #00d1b2;
 }
 
 .hero .subtitle {
-  line-height: 1.6em;
+  font-size: 22px;
+  line-height: 34px;
+  padding: 0px 10px 0px 10px ;
 }
 
 /* STYLING IMAGE FROM NASA */
@@ -57,6 +73,8 @@ a.navbar-item:focus {
   border: 2px solid #666;
   line-height: 0;
   position: relative;
+  max-height: 325px;
+  overflow: hidden;
 }  
 
 #imageBackground:hover {
@@ -78,18 +96,11 @@ a.navbar-item:focus {
 
 /* styling tiles */
 .tile.is-child {
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgba(255,255,255, 0.8);
 }
 
-#answer {
-  font-size: 20px;
-  background-color: #d5c0ec;
-  padding:15px;
-  text-align: center;
-}
-
-#retrograde {
-  font-size: 20px;
+.retrograde {
+  font-size: 16px;
   background-color: #d5c0ec;
   padding: 10px 20px 10px 20px;
   border: 1px solid #999;
@@ -101,44 +112,12 @@ a.navbar-item:focus {
 .isCentered {
   margin: 0 auto;
   text-align: center; 
-  padding: 15px;
+  padding: 5px;
 }
-
-/* #searchDate {
-  background-color: #00d1b2;
-  border: 1px solid #666;
-  border-radius: 8px;
-  padding: 10px 20px 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  font-weight: bold;
-  box-shadow: #333 0px 2px 3px;
-} */
-
-/* #searchDate:hover {
-  background-color: #d5c0ec;
-  color: #333;
-} */
-/* 
-#modalBtn {
-  background-color: #00d1b2;
-  border: 1px solid #666;
-  border-radius: 8px;
-  padding: 10px 20px 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  font-weight: bold;
-  box-shadow: #333 0px 2px 3px;
-} */
 
 .modal-card-body p {
 padding: .5em 0em .5em 0em;
 }
-
-/* #modalBtn:hover {
-  background-color: #d5c0ec;
-  color: #333;
-} */
 
 
 /* STYLING FOR THE ZODIAC BUTTONS */
@@ -156,6 +135,26 @@ padding: .5em 0em .5em 0em;
   background-color: #89789e;
   padding: 20px 0px 20px 0px;
   border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* STYLING FOR THE RULING PLANETS */
+.planetImage {
+  width:180px;
+  border: 1px solid #999;
+  border-radius: 35px;
+  margin:10px 0px 10px 0px;
+}
+
+.rulingPlanetDesc {
+  line-height: 0;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.rulingPlanets {
+  width: 280px;
+  border: 1px solid #999;
+  border-radius: 35px;
 }
 
 /* STYLING FOR THE ZODIAC SIGN BUTTONS */
@@ -208,8 +207,8 @@ padding: .5em 0em .5em 0em;
   font-weight: bold;  /* Sets the font weight to bold for the zodiac signs subtitle text */
   color: #333;  /* Sets the font color of the zodiac signs subtitle */
   font-family: 'Ubuntu', sans-serif;  /* Sets the font family of the zodiac signs subtitle */
-  padding-top: 0px; 
-  padding-bottom: 30px;  
+  padding-top: 15px; 
+  padding-bottom: 20px;  
   text-transform: uppercase; 
 }
 
@@ -255,39 +254,26 @@ background-image:url("https://wallpaperplay.com/walls/full/1/8/3/364649.jpg");
 
 /* STYLING THE ZODIAC CAD SUBTITLES */
 
-.zodiacTraitsTitle {
+.zodiac-gen-info-titles {
   font-weight: bold; 
   color: #89789e;
   text-transform: uppercase;
-}
-.zodiacSymbolTitle {
-  font-weight: bold; 
-  color: #89789e;
-  text-transform: uppercase;
-}
-.zodiacVibeTitle {
-  font-weight: bold;
-  color: #89789e;
-  text-transform: uppercase;
-}
-.zodiacMentalTitle {
-  font-weight: bold;
-  color: #89789e;
-  text-transform: uppercase;
+  font-size:18px;
 }
 
 
 /* STYLING FOR IFRAME TAG */
 
 iframe {
-  height: 720px;
+  height: 1100px;
   width: 100%;
   position: relative;
   animation-name: easeIn;
   animation-duration: 3s;  
   animation-fill-mode: forwards;
   border-radius: 5px;
-  /* opacity: 0%; */
+  border: 1px solid #333;
+  margin-top: 5px;
 }
 
 @keyframes easeIn {
@@ -316,11 +302,14 @@ footer {
  footer a:hover {
      color: #efefef;
  }
- 
- h1 {
-     margin-right: 50px;
+
+ .gap {
+   padding: 50px;
  }
 
+ .tinyGap {
+   padding:10px;
+ }
 
 
 /*  SCREEN SIZE MEDIA QUERIES TO CHANGE THE LAYOUT OF THE ZODIAC BUTTONS */
