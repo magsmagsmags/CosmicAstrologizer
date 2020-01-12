@@ -1,33 +1,34 @@
 $(document).ready(function () {
     //global varibales
-
     var spotifyFrameEl = $("#spotifyFrame");
     var spotifyDivEl = $("#spotifyDiv");
     var spotifyUrl = "https://open.spotify.com/embed/playlist/";
-
     var currentDay = moment().format("YYYYMMDD");
     var currentYear = moment().format("YYYY");
-
-    console.log(currentDay);
-    console.log(currentYear);
+    // console.log(currentDay);
+    // console.log(currentYear);
     var retrograde;
     var answerEl = $("#answer");
     answerEl.hide();
-
     var zodiacNameEl = $(".zodiacName");
-    var zodiacTraitsEl = $(".zodiacTraits");
+    var zodiacGoodTraitsEl = $(".zodiacGoodTraits");
+    var zodiacBadTraitsEl = $(".zodiacBadTraits");
     var zodiacSymbolEl = $(".zodiacSymbol");
     var zodiacVibeEl = $(".zodiacVibe");
     var zodiacMentalEl = $(".zodiacMental");
-    var zodiacDatesEl = $(".zodiacDates");
+    var zodiacDateOneEl = $(".zodiacDateOne");
+    var zodiacDateTwoEl = $(".zodiacDateTwo");
     var zodiacGraphicEl = $(".zodiacGraphic");
     var zodiacSignEl = $(".zodiacSign");
     var rulingPlanetEl = $(".rulingPlanet");
+    var rulingPlanetDescEl = $(".rulingPlanetDesc");
+    var planetImageEl = $(".planetImage");
+    var zodiacElementEl = $(".zodiacElement");
+    var zodiacElementImgEl = $(".zodiacElementImg")
 
 
-    //holding spotify URL path
+    // holding spotify URL path
     var userSign = {
-
         aries: "37i9dQZF1DX2DC3Q7JOmYe",
         taurus: "37i9dQZF1DXbCgDGG5xQtb",
         gemini: "37i9dQZF1DWWVULl5wUsL9",
@@ -40,31 +41,28 @@ $(document).ready(function () {
         capricorn: "37i9dQZF1DX2rcqmLx0nK4",
         aquarius: "37i9dQZF1DX7F9VDRJOFhw",
         pisces: "37i9dQZF1DWX0EDWtabVRv"
-
     };
 
 
-    //button click functions
-
+    // button click functions
 
     $(".aries").on("click", function (event) {
         console.log(spotifyUrl + userSign.aries);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN ARIES IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        //Adding name of Astrological Sign + Spotify Playlist to Title
-        $("#spotifyListName").text("Aries Spotify PlayList");
-
-        //adding attribute of URL to iframe tag in index
+        // Adding name of Astrological Sign + Spotify Playlist to Title
+        // $("#spotifyListName").text("Aries Spotify PlayList");
+        // adding attribute of URL to iframe tag in index
         spotifyFrameEl.attr("src", spotifyUrl + userSign.aries);
-        //appending the element to the div holding iframe
+        // appending the element to the div holding iframe
         spotifyDivEl.append(spotifyFrameEl);
-
-        //calling function and passing the sign name and the appropriate index number that shows in the API documentation as arguments.
+        // calling function and passing the sign name and the appropriate index number that shows in the API documentation as arguments.
         displayZodiacInfo("Aries", 0);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/aries-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/aries.png")
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/aries-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/aries.png");
+        planetImageEl.attr("src", "assets/img/planets/mars.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/fire.jpg");
     });
 
 
@@ -73,16 +71,14 @@ $(document).ready(function () {
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN TAURUS IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Taurus Spotify PlayList");
-
-
+        // $("#spotifyListName").text("Taurus Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.taurus);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Taurus", 1);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/taurus-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/taurus.png")
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/taurus-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/taurus.png");
+        planetImageEl.attr("src", "assets/img/planets/venus.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/earth.jpg");
     });
 
     $(".gemini").on("click", function (event) {
@@ -90,182 +86,149 @@ $(document).ready(function () {
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN GEMINI IS CLICKED");
         console.log("EXAMPLE OF SPAN");
-        $("#spotifyListName").text("Gemini Spotify PlayList");
-
-
-
-
+        // $("#spotifyListName").text("Gemini Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.gemini);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Gemini", 2);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/gemini-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/gemini.png")
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/gemini-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/gemini.png");
+        planetImageEl.attr("src", "assets/img/planets/mercury.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/air.jpg");
     });
+
     $(".cancer").on("click", function (event) {
         console.log(spotifyUrl + userSign.cancer);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN CANCER IS CLICKED");
         console.log("EXAMPLE OF PTAG");
-        $("#spotifyListName").text("Cancer Spotify PlayList");
-
-
+        // $("#spotifyListName").text("Cancer Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.cancer);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Cancer", 3);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/cancer-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/cancer.png")
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/cancer-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/cancer.png");
+        planetImageEl.attr("src", "assets/img/planets/moon.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/water.jpg");
     });
+
     $(".leo").on("click", function (event) {
         console.log(spotifyUrl + userSign.leo);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN LEO IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Leo Spotify PlayList");
-
-
+        // $("#spotifyListName").text("Leo Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.leo);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Leo", 4);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/leo-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/leo.png")
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/leo-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/leo.png");
+        planetImageEl.attr("src", "assets/img/planets/sun.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/fire.jpg");
     });
+
     $(".virgo").on("click", function (event) {
         console.log(spotifyUrl + userSign.virgo);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN VIRGO IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Virgo Spotify PlayList");
-
-
+        // $("#spotifyListName").text("Virgo Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.virgo);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Virgo", 5);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/virgo-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/virgo.png")
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/virgo-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/virgo.png");
+        planetImageEl.attr("src", "assets/img/planets/mercury.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/earth.jpg");
     });
+
     $(".libra").on("click", function (event) {
         console.log(spotifyUrl + userSign.libra);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN LIBRA IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Libra Spotify PlayList");
-
-
-
+        // $("#spotifyListName").text("Libra Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.libra);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Libra", 6);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/libra-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/libra.png")
-
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/libra-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/libra.png");
+        planetImageEl.attr("src", "assets/img/planets/venus.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/air.jpg");
     });
+
     $(".scorpio").on("click", function (event) {
         console.log(spotifyUrl + userSign.scorpio);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN SCORPIO IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Scorpio Spotify PlayList");
-
-
-
+        // $("#spotifyListName").text("Scorpio Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.scorpio);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Scorpio", 7);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/scorpio-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/scorpio.png")
-
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/scorpio-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/scorpio.png");
+        planetImageEl.attr("src", "assets/img/planets/pluto.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/water.jpg");
     });
+
     $(".sagittarius").on("click", function (event) {
         console.log(spotifyUrl + userSign.sagittarius);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN SAGITTARIUS IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Sagittarius Spotify PlayList");
-
-
+        // $("#spotifyListName").text("Sagittarius Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.sagittarius);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Sagittarius", 8);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/sagittarius-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/sagittarius.png")
-
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/sagittarius-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/sagittarius.png");
+        planetImageEl.attr("src", "assets/img/planets/jupiter.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/fire.jpg");
     });
+
     $(".capricorn").on("click", function (event) {
         console.log(spotifyUrl + userSign.capricorn);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN CAPRICORN IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Capricorn Spotify PlayList");
-
-
-
+        // $("#spotifyListName").text("Capricorn Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.capricorn);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Capricorn", 9);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/capricorn-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/capricorn.png")
-
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/capricorn-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/capricorn.png");
+        planetImageEl.attr("src", "assets/img/planets/saturn.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/earth.jpg");
     });
+
     $(".aquarius").on("click", function (event) {
         console.log(spotifyUrl + userSign.aquarius);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN AQUARIUS IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Aquarius Spotify PlayList");
-
-
-
+        // $("#spotifyListName").text("Aquarius Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.aquarius);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Aquarius", 10);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/aquarius-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/aquarius.png")
-
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/aquarius-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/aquarius.png");
+        planetImageEl.attr("src", "assets/img/planets/uranus.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/air.jpg");
     });
+
     $(".pisces").on("click", function (event) {
         console.log(spotifyUrl + userSign.pisces);
         event.preventDefault();
         console.log("DEBUG: THIS WILL SHOW WHEN PISCES IS CLICKED");
         console.log("EXAMPLE OF BUTTON");
-        $("#spotifyListName").text("Pisces Spotify PlayList");
-
-
-
+        // $("#spotifyListName").text("Pisces Spotify PlayList");
         spotifyFrameEl.attr("src", spotifyUrl + userSign.pisces);
         spotifyDivEl.append(spotifyFrameEl);
-
         displayZodiacInfo("Pisces", 11);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/pisces-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/pisces.png")
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/pisces-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/pisces.png");
+        planetImageEl.attr("src", "assets/img/planets/neptune.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/earth.jpg");
     });
 
     //if-statements for putting current sign on Spotify
@@ -273,111 +236,90 @@ $(document).ready(function () {
     if (moment().subtract(1, "year") + moment().format('1222') <= currentDay && currentDay <= (currentYear + moment().format('0119'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.capricorn);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Capricorn Spotify PlayList");
+        // $("#spotifyListName").text("Capricorn Spotify PlayList");
         displayZodiacInfo("Capricorn", 9);
-        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/capricorn-graphic.jpg")
-        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/capricorn.png")
-
-
+        zodiacGraphicEl.attr("src", "assets/img/zodiac-graphics/capricorn-graphic.jpg");
+        zodiacSignEl.attr("src", "assets/img/zodiac-buttons/capricorn.png");
+        planetImageEl.attr("src", "assets/img/planets/saturn.jpg");
+        zodiacElementImgEl.attr("src", "assets/img/elements/earth.jpg");
     };
 
 
     if (currentYear + moment().format('0119') <= currentDay && currentDay <= (currentYear + moment().format('0218'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.aquarius);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Aquarius Spotify PlayList");
+        // $("#spotifyListName").text("Aquarius Spotify PlayList");
         displayZodiacInfo("Aquarius", 10);
-
-
     };
 
     if (currentYear + moment().format('0219') <= currentDay && currentDay <= (currentYear + moment().format('0320'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.pisces);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Pisces Spotify PlayList");
+        // $("#spotifyListName").text("Pisces Spotify PlayList");
         displayZodiacInfo("Pisces", 11);
-
-
     };
 
     if (currentYear + moment().format('0321') <= currentDay && currentDay <= (currentYear + moment().format('0419'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.aries);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Aries Spotify PlayList");
+        // $("#spotifyListName").text("Aries Spotify PlayList");
         displayZodiacInfo("Aries", 0);
-
-
     };
 
     if (currentYear + moment().format('0420') <= currentDay && currentDay <= (currentYear + moment().format('0520'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.taurus);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Taurus Spotify PlayList");
+        // $("#spotifyListName").text("Taurus Spotify PlayList");
         displayZodiacInfo("Taurus", 1);
-
-
     };
 
     if (currentYear + moment().format('0521') <= currentDay && currentDay <= (currentYear + moment().format('0620'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.gemini);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Gemini Spotify PlayList");
+        // $("#spotifyListName").text("Gemini Spotify PlayList");
         displayZodiacInfo("Gemini", 2);
-
     };
 
     if (currentYear + moment().format('0621') <= currentDay && currentDay <= (currentYear + moment().format('0722'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.cancer);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Cancer Spotify PlayList");
+        // $("#spotifyListName").text("Cancer Spotify PlayList");
         displayZodiacInfo("Cancer", 3);
-
-
     };
 
     if (currentYear + moment().format('0723') <= currentDay && currentDay <= (currentYear + moment().format('0822'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.leo);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Leo Spotify PlayList");
+        // $("#spotifyListName").text("Leo Spotify PlayList");
         displayZodiacInfo("Leo", 4);
-
-
     };
 
     if (currentYear + moment().format('0823') <= currentDay && currentDay <= (currentYear + moment().format('0922'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.virgo);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Virgo Spotify PlayList");
+        // $("#spotifyListName").text("Virgo Spotify PlayList");
         displayZodiacInfo("Virgo", 5);
-
-
     };
 
     if (currentYear + moment().format('0923') <= currentDay && currentDay <= (currentYear + moment().format('1022'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.libra);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Libra Spotify PlayList");
+        // $("#spotifyListName").text("Libra Spotify PlayList");
         displayZodiacInfo("Libra", 6);
-
-
     };
 
     if (currentYear + moment().format('1023') <= currentDay && currentDay <= (currentYear + moment().format('1121'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.scorpio);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Scorpio Spotify PlayList");
+        // $("#spotifyListName").text("Scorpio Spotify PlayList");
         displayZodiacInfo("Scorpio", 7);
-
-
     };
 
     if (currentYear + moment().format('1122') <= currentDay && currentDay <= (currentYear + moment().format('1221'))) {
         spotifyFrameEl.attr("src", spotifyUrl + userSign.sagittarius);
         spotifyDivEl.append(spotifyFrameEl);
-        $("#spotifyListName").text("Sagittarius Spotify PlayList");
+        // $("#spotifyListName").text("Sagittarius Spotify PlayList");
         displayZodiacInfo("Sagittarius", 8);
-
-
     };
 
 
@@ -395,30 +337,23 @@ $(document).ready(function () {
                 //making sure the btn click matches to the api call
                 console.log(response[y].name);
                 if (x === response[y].name) {
-
                     console.log("DEBUG: TRUE");
                 } else {
                     console.log("DEBUG: FALSE");
                 }
                 //INPUTTING TEXT INTO MY P TAGS IN INDEX FROM MY API CALL
                 zodiacNameEl.text(x);
-                zodiacTraitsEl.text("Good Traits: " + response[y].good_traits);
-                zodiacSymbolEl.text("Symbol: " + response[y].symbol);
-                zodiacVibeEl.text("Vibe: " + response[y].vibe);
-                zodiacMentalEl.text("Mental Traits: " + response[y].mental_traits);
-                zodiacDatesEl.text("Sign Dates:" + response[y].sun_dates);
-                rulingPlanetEl.text("Ruling Planet:" + response[y].ruling_planet);
-                zodiacTraitsEl.text(" " + response[y].good_traits);
+                zodiacDateOneEl.text(" " + response[y].sun_dates[0]);
+                zodiacDateTwoEl.text(" " + response[y].sun_dates[1]);
+                rulingPlanetEl.text(" " + response[y].ruling_planet[0]);
+                rulingPlanetDescEl.text(" " + response[y].ruling_planet[1]);
+                zodiacGoodTraitsEl.text(" " + response[y].good_traits);
+                zodiacBadTraitsEl.text(" " + response[y].bad_traits);
                 zodiacSymbolEl.text(" " + response[y].symbol);
                 zodiacVibeEl.text(" " + response[y].vibe);
                 zodiacMentalEl.text(" " + response[y].mental_traits);
-
-
-
-
+                zodiacElementEl.text(" " + response[y].element);
             });
-
-
     };
 
     //calling NASA API
@@ -473,8 +408,6 @@ $(document).ready(function () {
             //logging response
             console.log(response);
             retrograde = response.is_retrograde;
-
-
             //comparing response to boolean values and printing out appropriate responses
             if (retrograde === true) {
                 $("#retrograde").append("Pay Attention! We are currently experiencing the effects of a Mercury Retrograde!");
@@ -489,17 +422,11 @@ $(document).ready(function () {
 
     //creating onClick event for Date search in MR Tile  
     $("#searchDate").on("click", function (event) {
-
-
         event.preventDefault();
         answerEl.empty();
         console.log("Hello");
-
-
         //grabbing user text date and putting it in variable
         var userDate = $("#date-text").val();
-
-
         //logging variable   
         console.log(userDate);
         $.ajax({
@@ -514,22 +441,17 @@ $(document).ready(function () {
                 if (retrograde === true) {
                     console.log("TRUE");
                     answerEl.show();
-
                     answerEl.append("Mercury will be in retrograde then!");
-
-
                 }
                 else if (userDate === "") {
-                    alert("Please input a valid date");
+                    answerEl.show();
+                    answerEl.append("Please input a valid date...");
                     //alerting the user they didn't put in a date
-
                 }
                 else {
                     console.log("FALSE");
                     answerEl.show();
-
                     answerEl.append("Mercury will not be in retrograde then!");
-
                 };
 
             });
@@ -561,11 +483,8 @@ class BulmaModal {
         var that = this
         modalClose.forEach(function (e) {
             e.addEventListener("click", function () {
-
                 that.elem.classList.toggle('is-active')
-
                 var event = new Event('modal:close')
-
                 that.elem.dispatchEvent(event);
             })
         })
@@ -573,13 +492,11 @@ class BulmaModal {
 
     on_show() {
         var event = new Event('modal:show')
-
         this.elem.dispatchEvent(event);
     }
 
     on_close() {
         var event = new Event('modal:close')
-
         this.elem.dispatchEvent(event);
     }
 
@@ -604,7 +521,7 @@ mrMdl.addEventListener('modal:show', function () {
 mrMdl.addEventListener("modal:close", function () {
     console.log("closed")
 })
-/* END ARIES MODAL SCRIPTS */
+/* END MODAL SCRIPTS */
 
 
 
