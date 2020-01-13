@@ -4,22 +4,27 @@
 * https://github.com/magsmagsmags/CosmicAstrologizer.git
 * https://magsmagsmags.github.io/CosmicAstrologizer/
 
-# Project Decription
+# Project Description
  Build web application from scratch that allows the user to select from a list of astrological zodiac signs and then display information to the user that is specific to that sign.  To acheive this, we will utilize API calls to get Mercury retrograde information, display Spotify playlists, and disdplay a photo of the day from NASA.  
- ![Screenshot](user_flow.png)  
+ ![Screenshot](assets/img/user_flow.png)  
 
 
 # User Story
 AS A a cosmic informational seeker I WANT to find information about Mercury retrograde SO THAT I can accurately understand the intricacies of my horoscope to better get in touch with the universe.
 
 # Wireframe
-![Screenshot](wireframe.png)  
+![Screenshot](assets/img/wireframe.png)  
 
+# How to Use The Site
+1. Click the Get Astrologized button to scroll down to the section of zodiac sign buttons.
+1. Click a zodiac sign button to update the astrological information on the page to the one selected
+![Screenshot](assets/img/website-action.gif)
 
 # APIs Used
 * NASA Picture of the Day || "https://api.nasa.gov/planetary/apod?api_key=rYHbWVB1P6xDiWadsZ91DWA5QzfvGnUL881Rgcdn"
 * Spotify render a playlist by ID widget || https://api.spotify.com/v1/playlists/37i9dQZF1DX6PdsVYbP4rI
 * Mercury Retrograde Status || https://www.programmableweb.com/api/mercury-retrograde
+* Zodiacly - The Zodiac API || https://zodiacal.herokuapp.com/
 
 
 # Task Breakdown

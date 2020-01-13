@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
@@ -27,9 +30,10 @@ body {
   margin-right: 10px;
 }
 
-
-button {
+.btn {
   font-weight: bold;
+  color: #333 !important;  
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 3px !important;
 }
 
 a {
@@ -55,7 +59,7 @@ a.navbar-item:focus {
 
 .hero h1 {
   font-size: 44px;
-  text-shadow: rgba(0, 0, 0, 0.8) 4px 3px 5px;
+  text-shadow: #000 2px 3px 3px;
 }
 
 .hero.is-dark .title{
@@ -200,6 +204,7 @@ padding: .5em 0em .5em 0em;
    font-family: 'Ubuntu', sans-serif;  /* Sets the font family of the zodiac signs title */
    padding-bottom: 0px; /* Sets the padding below the zodiac signs title so it's not too close to the zodiac sign buttons */
    text-transform: uppercase;
+   line-height: 40px;
 }
 
 #zodiac-subtitle {  /* ZODIAC SUBTITLE */ 
